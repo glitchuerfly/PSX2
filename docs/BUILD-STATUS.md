@@ -48,3 +48,7 @@ native_osd.py, native/core_osd.cpp, config/native-osd.json, check_alignment.py a
 app_icon.py additionally uses Pillow for deterministic image resizing and final APK pixel validation. Its canonical private app-assets input layout and the complete APK build pipeline are absent. The original user PNG is published only at .github/assets/app_icon.png under the recorded user authorization, without assigning a general artwork license.
 
 The helper's NDK unwind archive and full toolchain notice are additionally pinned by hash. native/NOTICE.toolchain is copied into the private APK and exposed through its existing Third-Party Notices index. A final notice-only APK rebuild verified those bytes and the 15 icon variants; the JNI adapter bytes remained identical to the fully host-checked build.
+
+## PSX2 identity update
+
+The public project name is PSX2 (formerly ARMSX2 Hybrid). The new application ID is `com.psx2.glitch`; internal Java/Kotlin/JNI namespaces remain unchanged. The ARMSX2 2.9.1 core retains its upstream name and credits. This documentation update does not refresh the partial source snapshot or make the complete APK buildable. The current README icon is a combined preview of the approved adaptive layers; older statements about the supplied PNG describe the historical snapshot.

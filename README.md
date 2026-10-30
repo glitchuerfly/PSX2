@@ -1,9 +1,9 @@
 
 <p align="center">
-  <img src=".github/assets/app_icon.png" width="140" alt="ARMSX2 Hybrid Logo">
+  <img src=".github/assets/app_icon.png" width="140" alt="PSX2 Logo">
 </p>
 
-<h1 align="center">ARMSX2 Hybrid</h1>
+<h1 align="center">PSX2</h1>
 
 <p align="center">
   <strong>Classic Interface. Modern Emulation Core.</strong>
@@ -25,11 +25,15 @@
 
 ## About
 
-**ARMSX2 Hybrid** is an unofficial Android PlayStation 2 emulator project that combines the classic AetherSX2/NetherSX2-based frontend with the ARMSX2 emulation core.
+Previously named **ARMSX2 Hybrid**. The public project name is now **PSX2**; the existing GitHub repository URL is retained.
+
+Android application ID: `com.psx2.glitch`. This is a separate Android app from `com.armsx2.hybrid`, not an in-place update. No automatic access to old app data or SAF grants is assumed. See [data migration plan](docs/DATA-MIGRATION.md).
+
+**PSX2** is an unofficial Android PlayStation 2 emulator project that combines the classic AetherSX2/NetherSX2-based frontend with the ARMSX2 emulation core.
 
 The project focuses on preserving the familiar AetherSX2 user experience while introducing newer emulation technology, improved touchscreen controls, additional customization options, and modern features.
 
-ARMSX2 Hybrid is independently developed and is not an official release of ARMSX2, AetherSX2, NetherSX2, or PCSX2.
+PSX2 is independently developed and is not an official release of ARMSX2, AetherSX2, NetherSX2, or PCSX2.
 
 ---
 
@@ -110,7 +114,7 @@ Some emulator settings and features may still require additional compatibility w
 
 **Current Version:** 1.0.0-beta
 
-ARMSX2 Hybrid is currently under active development.
+PSX2 is currently under active development.
 
 ### Development Priorities
 
@@ -135,7 +139,7 @@ Release information will be published once the application is ready for distribu
 
 ## Source Code
 
-This repository contains selected source code, integration components, tests, and documentation from the ARMSX2 Hybrid project.
+This repository contains selected source code, integration components, tests, and documentation from the PSX2 project.
 
 The published source is a partial source preview and does not represent the complete buildable source code of the combined application. It is not complete GPL Corresponding Source for the hybrid APK.
 
@@ -147,7 +151,7 @@ See [Publication Audit](PUBLICATION-AUDIT.md) for more information.
 
 ## Credits & Acknowledgements
 
-ARMSX2 Hybrid builds upon the work of several emulator projects:
+PSX2 builds upon the work of several emulator projects:
 
 - **[PCSX2](https://github.com/PCSX2/pcsx2)** — PlayStation 2 emulation technology.
 - **[ARMSX2](https://github.com/ARMSX2/ARMSX2)** — ARMSX2 emulation core.
@@ -160,7 +164,7 @@ Special thanks to the developers and contributors of these projects.
 
 ## Legal & Licensing
 
-ARMSX2 Hybrid is an independent, unofficial community project.
+PSX2 is an independent, unofficial community project.
 
 This project is not affiliated with, sponsored by, or endorsed by Sony Interactive Entertainment, PCSX2, ARMSX2, AetherSX2, or NetherSX2.
 

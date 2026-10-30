@@ -24,3 +24,9 @@ The controller startup path prepares the real layout before VM startup, shares p
 ControllerLoadNotice posts an enabled per-game configuration acknowledgement through CoreOsd to the original core OSD queue with a controller glyph. It uses the core's font/scale/stack/fade and renders behind touchscreen controls. CoreOsd.java, native/core_osd.cpp, config/native-osd.json and native_osd.py are included as partial integration source; their compiled shim/core binaries, private hooks and Default runtime PNGs remain absent.
 
 The private app and GitHub icon use the supplied PNG. The exported source alone cannot demonstrate the running UI or build the complete APK.
+
+## PSX2 identity update
+
+The public project name is PSX2 (formerly ARMSX2 Hybrid). The new application ID is `com.psx2.glitch`; internal Java/Kotlin/JNI namespaces remain unchanged. The ARMSX2 2.9.1 core retains its upstream name and credits. This documentation update does not refresh the partial source snapshot or make the complete APK buildable. The current README icon is a combined preview of the approved adaptive layers; older statements about the supplied PNG describe the historical snapshot.
+
+The private 15280 candidate adds a library-only [Background Gallery](BACKGROUND-GALLERY.md), separate from the rebranding-only 15279 APK. Default follows app theme; Classic Blue is original; Custom Image uses bounded SAF preview with Cancel/Apply. Blue Waves is withheld pending artwork rights verification. These new Gallery implementation files are not added to this historical partial source snapshot.

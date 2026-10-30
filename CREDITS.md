@@ -1,7 +1,9 @@
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
-# Credits and copyright scope
+# PSX2 credits and copyright scope
 
 > Local asset review update: .github/assets now contains screenshots and a user-requested app_icon.png outside the audited source allowlist. Their redistribution rights remain unverified; they are not covered by the source GPL declaration. This staging folder is not publication-cleared and no ZIP is produced. See .github/assets/ASSET-REVIEW.json and VALIDATION-REPORT.json.
+
+PSX2 was previously named ARMSX2 Hybrid. This name change does not change any upstream license, copyright, attribution or artwork reuse grant.
 
 ## Hybrid integration
 
@@ -55,3 +57,7 @@ CoreOsd calls the original ARMSX2/PCSX2 Host OSD queue, using the pinned GPL sou
 The replacement .github/assets/app_icon.png was provided by the user for the application and this repository. Publication was explicitly requested; a separate general artwork reuse license has not been specified. The source-code GPL declaration does not relicense the icon.
 
 The native OSD helper uses the Android NDK unwind runtime. The complete original NDK toolchain notice is preserved in native/NOTICE.toolchain; the original component copyright/license terms apply. The private app links the bundled copy from Third-Party Notices.
+
+## Current adaptive documentation preview
+
+The app icon preview now combines the user-approved build-15275 vector foreground and background, rather than the archived older PNG. It is 1024px and unmasked; launchers apply their own adaptive mask in the Android app. See .github/assets/APP-ICON-PREVIEW.json. No general artwork license is newly assigned. Historical asset-review/audit records remain unchanged; screenshots are untouched.

@@ -54,3 +54,7 @@ ControllerLoadNotice calls CoreOsd.post, which loads the small JNI libhybridosd 
 config/native-osd.json pins the two core hashes, the libc++ hash and executable call-site/function data. native_osd.py rejects an unreviewed donor, builds the shim and checks 16 KB ELF layout and absence of build-machine RPATH. A pure NDK ABI check tests short/long strings and ownership using the donor libc++, without loading the emulator or starting a VM. Runtime guards reject unsupported bindings. A future core update requires binding/ABI review; the internal function address is not a stable upstream API.
 
 app_icon.py preserves the user PNG separately and produces five density sets of three bitmap slots. Its APK check compares decoded image pixels, allowing aapt PNG crunching without accepting an old icon. The GitHub asset is the original supplied PNG, not a resized launcher variant.
+
+## PSX2 identity update
+
+The public project name is PSX2 (formerly ARMSX2 Hybrid). The new application ID is `com.psx2.glitch`; internal Java/Kotlin/JNI namespaces remain unchanged. The ARMSX2 2.9.1 core retains its upstream name and credits. This documentation update does not refresh the partial source snapshot or make the complete APK buildable. The current README icon is a combined preview of the approved adaptive layers; older statements about the supplied PNG describe the historical snapshot.

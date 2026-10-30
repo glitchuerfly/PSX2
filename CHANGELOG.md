@@ -1,6 +1,14 @@
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
 # Changelog
 
+## PSX2 branding and application identity — 2026-10-31
+
+- Rename the public project from ARMSX2 Hybrid to PSX2; retain the repository URL and upstream credits.
+- The new Android app uses `com.psx2.glitch` with the existing signer; the old app/data remain separate.
+- Export the approved adaptive foreground/background as a 1024px README preview. Screenshots are unchanged.
+- Add an explicit, user-approved export/import migration plan. No migration, installation or upload is performed by this documentation update.
+- Keep the partial-source/build limitations and historical license/audit records unchanged.
+
 ## Native runtime notices — 2026-10-30
 
 - Preserve the complete unmodified NDK toolchain notice for the native helper's statically linked unwind runtime.
