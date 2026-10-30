@@ -13,8 +13,10 @@ Features below describe private-project implementations; “included” means so
 | Remote Play | Hybrid UI/runtime source, pad ownership policy and verified ARMSX2 backend snapshots | Generator adaptations, native WebRTC, core binaries, legacy settings tabs and resources |
 | JNI/Native Core Integration | NativeApp contract and Bridge entry points | Core native implementation/binaries and legacy host |
 | Diagnostics | legacy_trace.cpp | Legacy library it instruments and native build setup |
-| Unit tests | Existing Java test sources; three suites run through the public runner | Android fakes, complete mappings, compiled Kotlin backend and other excluded dependencies |
+| Unit tests | Existing Java test sources; four suites run through the public runner | Android fakes, complete mappings, compiled Kotlin backend and other excluded dependencies |
 
 The latest included pause-menu change calls the existing host page transaction with D(6, true), enabling the same fade path used by Settings. This export does not contain that legacy transaction implementation.
 
 No game compatibility, performance, image quality, networking, or complete emulator runtime claim is established by the public host checks.
+
+The controller startup update shares profile-file selection between core settings and the initial legacy controller layout. It includes atomic artwork/cache state and stale-selection guards. ControllerLoadNotice provides a short Android overlay after successful configuration/native commit, using the OSD message switch/scale; it does not insert into the donor's native OSD queue. The private legacy hook, Default PNG assets and Android host remain excluded, so the exported source alone cannot demonstrate this UI behavior.

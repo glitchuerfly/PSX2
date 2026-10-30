@@ -14,8 +14,10 @@ SOURCES = [
     "src/remoteplay/org/local/aetherarms/RemotePadController.java",
     "src/skins/org/local/aetherarms/SkinPolicy.java",
     "src/skins/org/local/aetherarms/SkinArchive.java",
+    "src/skins/org/local/aetherarms/SkinLoadState.java",
+    "src/controller/org/local/aetherarms/ControllerSettings.java",
 ]
-TESTS = ["AudioFocusChecks", "RemotePadChecks", "SkinChecks"]
+TESTS = ["AudioFocusChecks", "RemotePadChecks", "SkinChecks", "SkinLoadChecks"]
 
 
 def main():
@@ -46,7 +48,7 @@ def main():
                 assert not absent.exists()
                 args.append(str(absent))
             subprocess.run(args, env=env, check=True)
-    print("PASS: 3 public host suites; community artwork, networking, and device tests excluded.")
+    print("PASS: 4 public host suites; community artwork, networking, and device tests excluded.")
 
 
 if __name__ == "__main__":

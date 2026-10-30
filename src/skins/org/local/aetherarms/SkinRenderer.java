@@ -25,6 +25,7 @@ public final class SkinRenderer {
     }
     public static void button(View view,Canvas canvas,Drawable original,boolean pressed) {
         String key=buttonKey(id(view));
+        if(!SkinStore.ready())return;
         Bitmap bitmap=key==null?null:SkinStore.bitmap(key);
         if(bitmap==null&&key!=null&&key.length()==2&&(key.charAt(0)=='l'||key.charAt(0)=='r')&&(key.charAt(1)=='1'||key.charAt(1)=='2')){
             shoulder(view,canvas,key,pressed);return;
@@ -32,8 +33,9 @@ public final class SkinRenderer {
         draw(canvas,bitmap,original,0,0,view.getWidth(),view.getHeight(),pressed,view.getResources().getDisplayMetrics().density);
     }
     public static void axis(View view,Canvas canvas,Drawable base,Drawable stick,int dx,int dy) {
-        int save=canvas.save();AnalogTouch.translate(view,canvas);
         String side=id(view).endsWith("right")?"right":"left";
+        if(!SkinStore.ready())return;
+        int save=canvas.save();AnalogTouch.translate(view,canvas);
         Bitmap b=SkinStore.bitmap("analog_base_"+side),s=SkinStore.bitmap("analog_stick_"+side);
         if(b==null)b=SkinStore.bitmap("analog_base");if(s==null)s=SkinStore.bitmap("analog_stick");
         float x=view.getPaddingLeft(),y=view.getPaddingTop();
@@ -45,6 +47,7 @@ public final class SkinRenderer {
     }
     public static void dpad(View view,Canvas canvas,int direction,Drawable original,boolean pressed,int x,int y,int w,int h) {
         id(view);
+        if(!SkinStore.ready())return;
         draw(canvas,SkinStore.bitmap(DpadGeometry.key(direction)),original,x,y,w,h,pressed,view.getResources().getDisplayMetrics().density);
     }
     private static void draw(Canvas canvas,Bitmap bitmap,Drawable original,float x,float y,float width,float height,boolean pressed,float viewDensity) {

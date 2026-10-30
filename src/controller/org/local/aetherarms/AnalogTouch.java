@@ -32,6 +32,7 @@ public final class AnalogTouch {
         return AnalogGesture.isDynamic(mode==null?null:String.valueOf(mode));
     }
     public static boolean canStart(View view,MotionEvent event,int index,Rect hit) {
+        if(!SkinStore.ready())return false;
         int action=event.getActionMasked();
         if((action!=MotionEvent.ACTION_DOWN&&action!=MotionEvent.ACTION_POINTER_DOWN)||event.getActionIndex()!=index)return false;
         float sx=view.getScaleX(),sy=view.getScaleY();

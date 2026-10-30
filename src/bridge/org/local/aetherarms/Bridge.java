@@ -126,11 +126,26 @@ public final class Bridge {
         }
     }
     private static SharedPreferences prefs() { return app.getSharedPreferences(app.getPackageName() + "_preferences", Context.MODE_PRIVATE); }
+    /** Resolve launch identity before the first native frame, independently of transient Activity.G. */
+    public static File controllerProfile(Activity activity) throws IOException {
+        String path=activity.getIntent().getStringExtra("bootPath");
+        int crc=path!=null&&path.equals(gamePath)?controllerCRC:0;
+        if(crc==0&&path!=null&&!path.isEmpty()){
+            Object entry=hostCall("getGameListEntry",new Class<?>[]{String.class},path);
+            if(entry!=null)try{crc=(Integer)entry.getClass().getMethod("getCRC").invoke(entry);}
+            catch(ReflectiveOperationException failure){throw new IOException("Launch game CRC ABI",failure);}
+        }
+        return ControllerSettings.profileFile(dataRoot,crc);
+    }
+    public static synchronized boolean controllerNoticeVisible(){
+        return sessionActive&&activityResumed&&surfaceReady&&!menuPaused&&!stopping&&!paused;
+    }
     public static void syncSettings() {
         if (!ready) return;
         ControllerRumble.refresh(dataRoot,controllerCRC,prefs().getAll());
         GraphicsConfig.pushGlobal(prefs());
-        ControllerRuntime.refresh(dataRoot,controllerCRC,prefs().getAll());
+        long noticeSession=ControllerLoadNotice.session();
+        boolean controllerLoaded=ControllerRuntime.refresh(dataRoot,controllerCRC,prefs().getAll());
         NativeApp.setSetting("SPU2/Output", "Backend", "string", "Oboe");
         // Use the donor's compatibility output to avoid AAudio MMAP/idle-reclaim
         // behavior on Home/Recents returns; volume and mute remain user settings.
@@ -140,6 +155,7 @@ public final class Bridge {
         // The core's API-not-Automatic popup belongs to its settings-warning group.
         NativeApp.setSetting("EmuCore","WarnAboutUnsafeSettings","bool","false");
         NativeApp.commitSettings();
+        ControllerLoadNotice.applied(noticeSession,controllerLoaded);
         ControllerRuntime.reapplyRemote();
         NativeApp.usbApplyPorts();
         NativeApp.setFreeSoftwareNotice(false);
@@ -149,6 +165,7 @@ public final class Bridge {
     public static void runVMThread(Context activity, String path, String state) {
         initialize(activity);
         if (activity instanceof Activity) org.libsdl.app.SDL.setContext((Activity)activity);
+        ControllerLoadNotice.beginSession();
         gamePath = path == null ? "" : path;
         gameSerial = ""; gameCRC = 0; controllerCRC = 0;
         if (!gamePath.isEmpty()) {
@@ -193,6 +210,7 @@ public final class Bridge {
             state = null;
         } while (resetting && !stopping);
         } finally {
+            ControllerLoadNotice.endSession();
             synchronized(Bridge.class){sessionStart=0;sessionActive=false;updateAudioPausePolicy();}
         }
     }
@@ -224,6 +242,7 @@ public final class Bridge {
                         previous = identity;
                     }
                     if (!started) { hostCall("onVMStarted"); started = true; }
+                    if(crc!=0)ControllerLoadNotice.presenting();
                     // ELF CRC becomes available after the first BIOS frames; wait for it
                     // before restoring a game state instead of treating CRC zero as final.
                     if (state != null && !state.isEmpty() && crc != 0) {
@@ -255,6 +274,7 @@ public final class Bridge {
         if (owner != null && owner != activity) return;
         emulationActivity = new WeakReference<>(activity);
         activityResumed = false;
+        ControllerLoadNotice.hide();
         releaseFastForward();
         reconcilePauseState();
         Log.i(TAG, "CORE_ACTIVITY background");
@@ -263,6 +283,7 @@ public final class Bridge {
         if(ready&&NativeApp.hasActiveVM())reloadGameSettings();
         emulationActivity = new WeakReference<>(activity);
         activityResumed = true;
+        ControllerLoadNotice.attach(activity);
         reconcilePauseState();
         GameAudioFocus.retry();
         Log.i(TAG, "CORE_ACTIVITY foreground");

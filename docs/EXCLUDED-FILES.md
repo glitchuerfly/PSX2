@@ -90,3 +90,7 @@ The table lists all 59 tracked files from the private hybrid snapshot that are n
 Legacy APK/code/resources/native host; copied D-pad vector geometry; Remote Play Smali method bodies; held mapping/translation inputs and generated outputs; avatar/skin/cover artwork; native WebRTC and other binary dependency closure; reconstructed ABI/test stubs.
 
 NetherSX2-patch licensing does not resolve rights over AetherSX2. Rights over names/logos are separate from source licenses. See PUBLICATION-AUDIT.md.
+
+## Later source updates
+
+The exclusion tables above record the initial audit snapshot. Later source additions are individually reviewed and recorded in PUBLICATION-MANIFEST.json. The private controller hook/build scripts, controller Default PNGs and their provenance payload, private reports, native binaries, signing material and backups remain omitted. Existing remote README visual assets are separately listed in .github/assets/ASSET-REVIEW.json; their rights are not cleared by the source allowlist.

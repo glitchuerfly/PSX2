@@ -12,6 +12,16 @@ public final class ControllerLayoutAccess {
     private static final WeakHashMap<View,Object> editors=new WeakHashMap<>();
     private ControllerLayoutAccess(){}
     public static void bind(View view,Object profile){editors.put(view,profile);}
+    /** Install the launch/retained-CRC profile before any layout/visibility getters run. */
+    public static void resolveActivity(Activity activity){
+        try{
+            java.io.File file=Bridge.controllerProfile(activity);
+            Object profile=file==null?null:Class.forName("l6.v4").getConstructor(String.class).newInstance(file.getPath());
+            activity.getClass().getField("G").set(activity,profile);
+        }catch(java.io.IOException failure){
+            android.util.Log.e("AetherArmsBridge","Cannot resolve launch controller configuration",failure);
+        }catch(ReflectiveOperationException failure){throw new IllegalStateException("Aether launch controller profile ABI",failure);}
+    }
     public static Object profile(View view){
         if(editors.containsKey(view))return editors.get(view);
         try{Object owner=view.getClass().getField("i").get(view);return owner==null?null:owner.getClass().getField("G").get(owner);}
@@ -25,6 +35,17 @@ public final class ControllerLayoutAccess {
             return data.getClass().getMethod(name,String.class,type).invoke(data,key,fallback);
         }}catch(ReflectiveOperationException e){throw new IllegalStateException("Aether layout settings ABI",e);}
         Object saved=view.getContext().getSharedPreferences(view.getContext().getPackageName()+"_preferences",0).getAll().get(key);return saved==null?fallback:saved;
+    }
+    public static String getString(View view,String key,String fallback){
+        if(!editors.containsKey(view))try{
+            Object owner=view.getClass().getField("i").get(view);
+            if(owner!=null)return (String)owner.getClass().getMethod("I",String.class,String.class).invoke(owner,key,fallback);
+        }catch(ReflectiveOperationException failure){throw new IllegalStateException("Aether controller skin layer ABI",failure);}
+        Object data=profile(view);
+        try{if(data!=null&&(Boolean)data.getClass().getMethod("k",String.class).invoke(data,key))
+            return (String)data.getClass().getMethod("d",String.class,String.class).invoke(data,key,fallback);
+        }catch(ReflectiveOperationException failure){throw new IllegalStateException("Aether editor skin layer ABI",failure);}
+        return view.getContext().getSharedPreferences(view.getContext().getPackageName()+"_preferences",0).getString(key,fallback);
     }
     public static int getInt(View view,String key,int fallback){return ControllerSettings.integer(value(view,key,fallback),fallback,Integer.MIN_VALUE,Integer.MAX_VALUE);}
     public static float getFloat(View view,String key,float fallback){return ControllerSettings.number(value(view,key,fallback),fallback,-Float.MAX_VALUE,Float.MAX_VALUE);}

@@ -49,6 +49,8 @@ ARMSX2 Hybrid is independently developed and is not an official release of ARMSX
 - **Static Analog:** Traditional fixed-position analog sticks.
 - **Custom Button Skins:** Customizable touchscreen button appearance.
 - Adjustable touchscreen layouts.
+- Controller profiles, added/removed buttons, and custom skins are selected before the first layout.
+- Brief controller configuration loaded acknowledgement, following OSD message preferences.
 - Multitouch input support.
 
 ### Enhanced Game Library
@@ -135,7 +137,7 @@ Release information will be published once the application is ready for distribu
 
 This repository contains selected source code, integration components, tests, and documentation from the ARMSX2 Hybrid project.
 
-The published source is a partial source preview and does not represent the complete buildable source code of the combined application.
+The published source is a partial source preview and does not represent the complete buildable source code of the combined application. It is not complete GPL Corresponding Source for the hybrid APK.
 
 Some legacy components are excluded due to unresolved licensing and redistribution requirements.
 

@@ -45,18 +45,20 @@ public final class ControllerSettings {
             }
         }return out;
     }
+    /** Selected on-disk controller layer; null means global settings. */
+    public static File profileFile(File root,int crc) throws IOException {
+        File gameFile=new File(root,"gamesettings/"+String.format(Locale.ROOT,"%08X.ini",crc));
+        Map<String,Object> game=crc==0?Collections.emptyMap():read(gameFile);
+        if(truth(game.get("Pad/UseGameSettingsForController")))return gameFile;
+        String name=String.valueOf(game.getOrDefault("Pad/InputProfileName",""));
+        if(name.isEmpty())return null;
+        File directory=new File(root,"inputprofiles").getCanonicalFile(),profile=new File(directory,name+".ini").getCanonicalFile();
+        if(!directory.equals(profile.getParentFile()))throw new IOException("Invalid controller input profile path");
+        return profile;
+    }
     public static Map<String,Object> effective(File root,int crc,Map<String,?> global) throws IOException {
-        Map<String,Object> game=crc==0?Collections.emptyMap():read(new File(root,"gamesettings/"+String.format(Locale.ROOT,"%08X.ini",crc)));
-        Map<String,Object> layer=Collections.emptyMap();
-        if(truth(game.get("Pad/UseGameSettingsForController")))layer=game;
-        else {
-            String name=String.valueOf(game.getOrDefault("Pad/InputProfileName",""));
-            if(!name.isEmpty()){
-                File directory=new File(root,"inputprofiles").getCanonicalFile(),profile=new File(directory,name+".ini").getCanonicalFile();
-                if(!directory.equals(profile.getParentFile()))throw new IOException("Invalid controller input profile path");
-                layer=read(profile);
-            }
-        }
+        File profile=profileFile(root,crc);
+        Map<String,Object> layer=profile==null?Collections.emptyMap():read(profile);
         Map<String,Object> out=new LinkedHashMap<>();
         for(Map.Entry<String,?> e:global.entrySet())if(owns(e.getKey()))out.put(e.getKey(),e.getValue());
         for(Map.Entry<String,Object> e:layer.entrySet())if(owns(e.getKey()))out.put(e.getKey(),e.getValue());

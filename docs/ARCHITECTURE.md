@@ -30,3 +30,11 @@ Vendor directories retain upstream snapshot layouts. Some vendor files are store
 - Resource names referenced by source are unresolved without independently licensed replacement resources.
 
 Do not treat these layers as proof that GPL code and the legacy host form a legally separate aggregate. The integration and the release rights need their own review.
+
+## Controller startup ordering
+
+The initial layout resolves the controller profile file from the launch entry CRC before VM start and from the retained game CRC during temporary BIOS CRC-zero frames. ControllerSettings.profileFile selects the same global/per-game/named-profile layer as core input configuration. The private Activity.L integration applies that selection synchronously before creating child controls, so visibility, position, scale and skin share a layer.
+
+SkinLoadState orders selections before main-thread dispatch, rejects obsolete decodes and publishes images/masks atomically. SkinStore caches two skins and keeps cold custom art pending rather than rendering Default. Controller-port icon code refers to Default resource identifiers; PNGs and legacy hooks are omitted.
+
+ControllerLoadNotice is a small Android UI overlay, since the pinned donor does not export a JNI arbitrary-OSD-message API. It waits for successful controller/native commit, presented game frames and ready skin, respects the OSD message switch/scale, and clears on background/session end. The core binaries remain unchanged. Its actual rendering and startup behavior are user-tested in the private app, not by this source export's host tests.

@@ -1,15 +1,21 @@
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
 # Publication audit — selected source export
 
-> Local asset review update: .github/assets now contains screenshots and a user-requested app_icon.png outside the audited source allowlist. Their redistribution rights remain unverified; they are not covered by the source GPL declaration. This staging folder is not publication-cleared and no ZIP is produced. See .github/assets/ASSET-REVIEW.json and VALIDATION-REPORT.json.
+> Source-delta review update: the five visual assets already present at remote commit 1c095595da5e659c0a6ad00464ab9da894b9e169 remain outside the audited A/B source allowlist. This update does not add or change those assets and does not clear their rights. See .github/assets/ASSET-REVIEW.json and VALIDATION-REPORT.json. No APK or ZIP release is produced.
 
 Prepared on 2026-10-30 from private project commit f0276fa2804f9174492b69f7cebbcf4c338bcc86.
 
-**This is a partial source collection for publication review. It is not a legal clearance, an APK release, or complete Corresponding Source for the hybrid APK. User approval is required before any upload.**
+**This is a partial source collection for publication review. It is not a legal clearance, an APK release, or complete Corresponding Source for the hybrid APK. The user authorized this reviewed source update to origin/main; that authorization does not establish third-party asset rights or authorize a binary release.**
 
-## Selection
+## Source update review — 2026-10-30
 
-The export contains 131 unchanged copies of audited files: 3 category A and 128 category B. This includes 51 adapter Java files, 8 hybrid Kotlin files, one diagnostics source, 10 Java tests, 52 vendor source/translation files, two vendor provenance records, and seven license/declaration files.
+The current source snapshot is `a2de3945e2404dc8a26e221c70a16976492ef4a2`. It contains 135 original file copies (3 A, 132 B): the original 131-file selection plus ControllerBindingIcons.java, ControllerLoadNotice.java, SkinLoadState.java and SkinLoadChecks.java. Each new file was inspected as original adapter/test logic with an explicit GPL-3.0-or-later header; it contains no recovered legacy implementation, copied vector path, artwork pixels or binary. Nine previously allowlisted source files were refreshed from the current private checkpoint. Full per-file hashes and provenance are in PUBLICATION-MANIFEST.json.
+
+The source delta and vendor/license hashes passed validation. Four public host suites passed without a device, downloads or networking. Existing remote visual assets remain unchanged and unverified, so this is a source-delta validation, not whole-repository publication clearance. The user-requested push uses a separate writable workspace checkout and preserves the latest remote README commit. Private source history is represented only by provenance commit identifiers, not uploaded Git objects.
+
+## Initial selection (historical baseline)
+
+The initial export contained 131 unchanged copies of audited files: 3 category A and 128 category B. This includes 51 adapter Java files, 8 hybrid Kotlin files, one diagnostics source, 10 Java tests, 52 vendor source/translation files, two vendor provenance records, and seven license/declaration files.
 
 New documentation, the public test runner, provenance mapping, validation report, and checksum inventory are created only in staging. They are not presented as recovered application source.
 

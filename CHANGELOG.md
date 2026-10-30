@@ -1,6 +1,20 @@
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
 # Changelog
 
+## Controller startup source update — 2026-10-30
+
+Refreshed reviewed source from private checkpoint `a2de3945e2404dc8a26e221c70a16976492ef4a2`.
+
+- Resolve controller profile before the first button layout, using the launch/retained game CRC through initial BIOS frames.
+- Keep Add/Remove visibility, layout geometry and skin selection consistent at startup.
+- Publish skin images and D-pad masks together; cache two skins and reject obsolete decoder results and queued selections.
+- Use Default controller-port icon identifiers independently of the selected touchscreen skin; the artwork itself is omitted.
+- Add a brief in-game configuration acknowledgement after successful controller application/native commit. This is an Android overlay styled like OSD; no donor native code is changed.
+- Include four newly reviewed GPL source/test files and a fourth runnable public host suite for skin-loading races and controller-profile selection.
+- Preserve the latest upstream README edit and all existing vendor notices.
+
+This update adds no APK, native library, proprietary resources, signing material or private Git history. The repository remains partial and cannot build the complete APK. Visual assets already present in the remote repository retain their unresolved review status.
+
 ## Publication source snapshot — 2026-10-30
 
 Exported selected source from private commit `f0276fa2804f9174492b69f7cebbcf4c338bcc86`.

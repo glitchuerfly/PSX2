@@ -9,11 +9,12 @@ This is a selected source export. It is not a Gradle application project, an APK
 
 Run python3 tests/run-public-checks.py with Python 3 and a JDK.
 
-The runner compiles five included policy classes and three unchanged test classes, then executes:
+The runner compiles seven included policy classes and four unchanged test classes, then executes:
 
 1. AudioFocusChecks: audio-focus ownership and pause/audio ordering.
 2. RemotePadChecks: input buffering, session ownership and disconnect release.
 3. SkinChecks: safe archive paths, limits, image filtering and skin policy; community archive fixture deliberately skipped.
+4. SkinLoadChecks: actual artwork cache/selection state, stale callbacks and retained-CRC profile/visibility resolution.
 
 On Termux, the runner uses PREFIX/lib for child-process library lookup when PREFIX is available. It creates and removes its temporary class files inside this export. It performs no ADB/device interaction, network access or APK build.
 
@@ -28,13 +29,13 @@ Seven additional test files are archived under tests/reference. Their prerequisi
 - DpadGeometry.java and the copied legacy vector geometry.
 - Legacy Preference ABI stub and Android UI test fakes.
 - Private Remote Play generator/adapted output, Kotlin/WebRTC binaries and complete runtime classpath.
-- Artwork, community fixtures, signing material and application data.
+- Runtime artwork, Default controller PNGs, community fixtures, signing material and application data. Existing README visual assets are outside this runtime source/dependency export.
 
 Retained Java/Kotlin packages do not make these omitted prerequisites available.
 
 ## Private build versus public export
 
-The private commit f0276fa built and passed its existing host checks before export, and its APK was installed separately. Those results belong to the private project. They do not establish that this public source collection builds an APK.
+The private checkpoint a2de3945e2404dc8a26e221c70a16976492ef4a2 built and passed its full host checks, and its APK was installed separately. Those results belong to the private project. They do not establish that this public source collection builds an APK.
 
 The public export's own results are recorded in VALIDATION-REPORT.json. Runtime appearance, games, networking and native execution are not tested here.
 

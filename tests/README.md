@@ -7,6 +7,7 @@ Runnable with the included policies and a JDK:
 
 - AudioFocusChecks.java
 - RemotePadChecks.java
+- SkinLoadChecks.java — cache/queue races and controller profile/visibility selection, using temporary INI fixtures only.
 - SkinChecks.java — its missing community ZIP argument points to an intentionally nonexistent temporary path, so no external artwork fixture is read.
 
 Reference-only sources retain their original tests but are not executed:

@@ -43,3 +43,7 @@ The cover service and skin catalog are referenced by source code, but no game co
 ## Names and logos
 
 This is an unofficial integration source archive. No trademark permission, endorsement, or right to redistribute third-party logos is asserted.
+
+## Controller startup update
+
+The later hybrid source update adds original controller-store selection, configuration acknowledgement and artwork-loading state/regression logic under the retained GPL-3.0-or-later declarations. ControllerBindingIcons contains resource identifiers and original label rendering; the upstream Default artwork is not included. These source changes do not grant rights to legacy app assets or existing README screenshots/icon.

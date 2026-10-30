@@ -1,0 +1,44 @@
+{
+  "scope": "Pre-existing remote visual assets only; no artwork redistribution clearance established by the source review.",
+  "assets": [
+    {
+      "path": ".github/assets/screenshots/custom_buttons.png",
+      "sha256": "6f805d1877995b93d746c7ba164cc52c7fee29b1a4bfc2677b3983b084dfc601",
+      "reason": "Unexpected screenshot outside audit allowlist; redistribution rights not verified; not copied by this export operation.",
+      "preexisting_remote_commit": "1c095595da5e659c0a6ad00464ab9da894b9e169",
+      "changed_by_this_update": false
+    },
+    {
+      "path": ".github/assets/screenshots/gameplay.png",
+      "sha256": "6f6b32efd32a46fb6ebdb9fde227b0b99de822bf1f597e1afa5fcdb8ada532c8",
+      "reason": "Unexpected screenshot outside audit allowlist; redistribution rights not verified; not copied by this export operation.",
+      "preexisting_remote_commit": "1c095595da5e659c0a6ad00464ab9da894b9e169",
+      "changed_by_this_update": false
+    },
+    {
+      "path": ".github/assets/screenshots/library.png",
+      "sha256": "ff4534c05ca3208e9b53a019391200f29ef55b80cb38c2d55390721f422adea6",
+      "reason": "Unexpected screenshot outside audit allowlist; redistribution rights not verified; not copied by this export operation.",
+      "preexisting_remote_commit": "1c095595da5e659c0a6ad00464ab9da894b9e169",
+      "changed_by_this_update": false
+    },
+    {
+      "path": ".github/assets/screenshots/remote_play.png",
+      "sha256": "2b04c33d8405a520ff8ca57fe2c5ec81fe227d24253073fa0bdfdf282c285ef1",
+      "reason": "Unexpected screenshot outside audit allowlist; redistribution rights not verified; not copied by this export operation.",
+      "preexisting_remote_commit": "1c095595da5e659c0a6ad00464ab9da894b9e169",
+      "changed_by_this_update": false
+    },
+    {
+      "path": ".github/assets/app_icon.png",
+      "original_path": "aether-armsx2-port/inputs/legacy/decoded/res/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "52302505e71197a20adcca936ab2ae56e31e164757681818f70f741e0cec5580",
+      "audit_category": "C",
+      "user_requested_local_copy": true,
+      "publication_cleared": false,
+      "reason": "App artwork from legacy input; no separate artwork redistribution grant established. Explicit local copy request does not establish copyright/trademark rights.",
+      "preexisting_remote_commit": "1c095595da5e659c0a6ad00464ab9da894b9e169",
+      "changed_by_this_update": false
+    }
+  ]
+}

@@ -83,9 +83,10 @@ public final class ControllerRuntime {
     public static void remoteStop(long token){remotePad.stop(token);}
     public static void remoteButton(long token,int key,int range,boolean down){remotePad.button(token,key,range,down);}
     public static void reapplyRemote(){remotePad.reapply();}
-    public static synchronized void refresh(File root,int crc,Map<String,?> global){
+    public static synchronized boolean refresh(File root,int crc,Map<String,?> global){
         initialize();release();
-        try{values=ControllerSettings.effective(root,crc,global);}catch(IOException e){Log.e(TAG,"Controller profile read failed; using global controller settings",e);values=new LinkedHashMap<>();values.putAll(global);}
+        boolean loaded=true;
+        try{values=ControllerSettings.effective(root,crc,global);}catch(IOException e){loaded=false;Log.e(TAG,"Controller profile read failed; using global controller settings",e);values=new LinkedHashMap<>();values.putAll(global);}
         for(int p=1;p<=8;p++){
             String kind=String.valueOf(values.getOrDefault("Pad"+p+"/Type",p==1?"DualShock2":"None"));
             Object[] info=(Object[])Bridge.hostCall("getPadSettings",new Class<?>[]{String.class},kind);
@@ -126,6 +127,7 @@ public final class ControllerRuntime {
         ControllerDevices.configure(values);
         if(active)scheduleFrame();
         SkinStore.applyControllerSkin(values.get("TouchscreenController/CustomSkin"));
+        return loaded;
     }
     private static synchronized boolean current(long token){return generation==token&&active;}
     public static synchronized Map<String,Object> snapshot(){return new LinkedHashMap<>(values);}

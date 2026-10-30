@@ -15,9 +15,15 @@ public final class SkinStore {
     private static final Handler MAIN=new Handler(Looper.getMainLooper());
     private static Context app;
     private static volatile String active="";
-    private static volatile Map<String,Bitmap> images=Collections.emptyMap();
-    private static volatile int generation;
-    private static volatile Map<String,DpadMask> dpadMasks=Collections.emptyMap();
+    private static final ExecutorService LOADER=Executors.newSingleThreadExecutor(r -> new Thread(r,"ControllerSkinArt"));
+    private static final class Artwork {
+        final Map<String,Bitmap> images;
+        final Map<String,DpadMask> masks;
+        Artwork(Map<String,Bitmap> images,Map<String,DpadMask> masks){
+            this.images=Collections.unmodifiableMap(images);this.masks=Collections.unmodifiableMap(masks);
+        }
+    }
+    private static final SkinLoadState<Artwork> artwork=new SkinLoadState<>(new Artwork(Collections.emptyMap(),Collections.emptyMap()),2);
     private static final Map<View,Boolean> views=new WeakHashMap<>();
     private static final Map<SkinPreference,Boolean> preferences=new WeakHashMap<>();
     public static final class Skin {
@@ -30,6 +36,7 @@ public final class SkinStore {
         active=app.getSharedPreferences("aetherarms_skins",0).getString("active","");
         android.content.SharedPreferences controllerPrefs=app.getSharedPreferences(app.getPackageName()+"_preferences",0);
         if(!controllerPrefs.contains("TouchscreenController/CustomSkin"))controllerPrefs.edit().putString("TouchscreenController/CustomSkin",active.isEmpty()?"default":active).commit();
+        active=ControllerPreferences.normalizeSkin(controllerPrefs.getString("TouchscreenController/CustomSkin","default"));
         IO.execute(() -> {
             File[] files=root().listFiles();
             if(files!=null)for(File f:files)if(f.isDirectory()&&f.getName().matches("skin_[a-f0-9]{32}\\.tmp"))
@@ -60,17 +67,29 @@ public final class SkinStore {
         if(files!=null)for(File f:files)if(localId(f.getName())&&f.isDirectory())out.add(new Skin(f.getName(),label(context,f.getName())));
         return out;
     }
+    private static boolean valid(String id){
+        return id.isEmpty()||id.equals("builtin:nethersx2")||id.equals("builtin:nethersx2_old")||localId(id)&&new File(root(),id).isDirectory();
+    }
+    private static void requestSkin(String id,boolean save){
+        // Issue the revision before posting, not when an old queued message is delivered.
+        final long revision=artwork.requestSelection();
+        Runnable apply=() -> {
+            if(!artwork.selectionCurrent(revision))return;
+            if(save)ControllerPreferences.saveSkin(id);
+            if(!active.equals(id)){
+                active=id;loadSelected();refresh();
+                android.util.Log.d("ControllerSkins","Applied selection revision="+revision+" skin="+(id.isEmpty()?"default":id));
+            }
+        };
+        if(Looper.myLooper()==Looper.getMainLooper())apply.run();else MAIN.post(apply);
+    }
     public static void select(String id) {
-        if(!(id.isEmpty()||id.equals("builtin:nethersx2")||id.equals("builtin:nethersx2_old")||localId(id)&&new File(root(),id).isDirectory()))return;
-        active=id;
-        ControllerPreferences.saveSkin(id);
-        loadSelected();
-        refresh();
+        if(valid(id))requestSkin(id,true);
     }
     public static void applyControllerSkin(Object saved){
         String id=ControllerPreferences.normalizeSkin(saved);
-        if(!(id.isEmpty()||id.equals("builtin:nethersx2")||id.equals("builtin:nethersx2_old")||localId(id)&&new File(root(),id).isDirectory()))id="";
-        if(!active.equals(id)){active=id;loadSelected();refresh();}
+        if(!valid(id))id="";
+        requestSkin(id,false);
     }
     public static boolean isLocal(String id){return localId(id);}
     public static void delete(String id) throws IOException {
@@ -117,9 +136,10 @@ public final class SkinStore {
         try(InputStream in=source.get()){return BitmapFactory.decodeStream(in,null,options);}
     }
     private static synchronized void loadSelected() {
-        final int request=++generation;final String selected=active;
-        images=Collections.emptyMap();dpadMasks=Collections.emptyMap();
-        IO.execute(() -> {
+        final SkinLoadState.Request request=artwork.select(active);
+        if(request==null){refresh();return;}
+        final String selected=request.id;
+        LOADER.execute(() -> {
             Map<String,Bitmap> loaded=new HashMap<>();
             Map<String,DpadMask> masks=new HashMap<>();
             if(!selected.isEmpty())for(String key:SkinPolicy.KEYS)try {
@@ -141,11 +161,20 @@ public final class SkinStore {
                     }
                 }
             }catch(IOException|RuntimeException ignored){}
-            MAIN.post(() -> {if(request!=generation)return;images=Collections.unmodifiableMap(loaded);dpadMasks=Collections.unmodifiableMap(masks);refresh();});
+            Artwork decoded=new Artwork(loaded,masks);
+            MAIN.post(() -> {if(artwork.complete(request,decoded))refresh();});
         });
     }
-    public static Bitmap bitmap(String key){return images.get(key);}
-    public static DpadMask dpadMask(String key){return dpadMasks.get(key);}
+    /** Resolve the same per-game/profile layer before the controller's first draw. */
+    public static void controllerConfigured(View controller){
+        initialize(controller.getContext());
+        // Activity.G is resolved from launch/retained CRC before layout creation.
+        Object selected=ControllerLayoutAccess.getString(controller,"TouchscreenController/CustomSkin","default");
+        applyControllerSkin(selected);
+    }
+    public static boolean ready(){return artwork.snapshot().ready;}
+    public static Bitmap bitmap(String key){Artwork value=artwork.snapshot().value;return value==null?null:value.images.get(key);}
+    public static DpadMask dpadMask(String key){Artwork value=artwork.snapshot().value;return value==null?null:value.masks.get(key);}
     private static void refresh() {
         if(Looper.myLooper()!=Looper.getMainLooper()){MAIN.post(SkinStore::refresh);return;}
         for(View v:new ArrayList<>(views.keySet()))if(v!=null)v.invalidate();

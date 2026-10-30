@@ -23,6 +23,7 @@ public final class DpadTouch {
         return DpadGeometry.freshDown(event.getActionMasked(),event.getActionIndex(),index)&&hit(view,event,index,hit);
     }
     public static boolean hit(View view,MotionEvent event,int index,Rect hit){
+        if(!SkinStore.ready())return false;
         float sx=view.getScaleX(),sy=view.getScaleY();if(sx<=0||sy<=0)return false;
         int x=(int)(((int)event.getX(index)-hit.left)/sx),y=(int)(((int)event.getY(index)-hit.top)/sy);
         return direct(view,x,y)!=0;

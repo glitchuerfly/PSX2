@@ -9,6 +9,7 @@ public final class ButtonTouch {
     private static final Rect otherBounds=new Rect(); // UI-thread dispatch only
     private ButtonTouch(){}
     public static boolean hit(View view,Rect hit,int x,int y){
+        if(!SkinStore.ready())return false;
         float sx=view.getScaleX(),sy=view.getScaleY();if(sx<=0||sy<=0)return false;
         float density=view.getResources().getDisplayMetrics().density;
         if(!TouchFeedback.targetContains(view.getWidth(),view.getHeight(),density,(x-hit.left)/sx,(y-hit.top)/sy))return false;
