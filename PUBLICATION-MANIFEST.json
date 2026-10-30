@@ -1,7 +1,7 @@
 {
   "format": 1,
   "created_utc": "2026-10-30T09:15:21.320945+00:00",
-  "source_project_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
+  "source_project_commit": "6786e1679de14239d274f909eacec5faaef4890b",
   "upstream_commit": "ba9d8460a56889180b999c52131c48fb5b4ab77a",
   "scope": "Partial audited source export; NOT complete Corresponding Source for the hybrid APK.",
   "selection_policy": "Explicit A/B allowlist; C/D and conservative generated-data holds omitted.",
@@ -1520,9 +1520,9 @@
       "audit_category": "B",
       "license": "GPL-3.0-or-later",
       "basis": "Reviewed original hybrid integration/helper/test source under explicit GPL-3.0-or-later grant. Native binding metadata is derived from the pinned GPL ARMSX2 source/core, not proprietary legacy code; no native binaries are included.",
-      "sha256": "be2bab9920a82913609161a871540662dd24d9fe514204a3a1f9c5f8ca414a53",
-      "source_last_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
-      "source_last_change_date": "2026-10-30T19:07:04+08:00",
+      "sha256": "9d326f43c0b38f44edbfebc31f376f2f888b35739d9681054ab891fb35fd7c12",
+      "source_last_commit": "6786e1679de14239d274f909eacec5faaef4890b",
+      "source_last_change_date": "2026-10-30T19:15:26+08:00",
       "content_modified_for_export": false
     },
     {
@@ -1531,9 +1531,9 @@
       "audit_category": "B",
       "license": "GPL-3.0-or-later",
       "basis": "Reviewed original hybrid integration/helper/test source under explicit GPL-3.0-or-later grant. Native binding metadata is derived from the pinned GPL ARMSX2 source/core, not proprietary legacy code; no native binaries are included.",
-      "sha256": "26e415e8eb66ae3264ca91a248ac190702a91c237950012be2a9d769b65b5a29",
-      "source_last_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
-      "source_last_change_date": "2026-10-30T19:07:04+08:00",
+      "sha256": "27881c433ede30885978b846cbf2f4021d8ce73485ca254db2eba102f518764b",
+      "source_last_commit": "6786e1679de14239d274f909eacec5faaef4890b",
+      "source_last_change_date": "2026-10-30T19:15:26+08:00",
       "content_modified_for_export": false
     },
     {
@@ -1567,6 +1567,17 @@
       "sha256": "955ef3b7c4ede96cbf79776f5e5927c3b0b29856655d1776269c475658d8743d",
       "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
       "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "native/NOTICE.toolchain",
+      "original_path": "aether-armsx2-port/native/NOTICE.toolchain",
+      "audit_category": "B",
+      "license": "Composite NDK toolchain third-party notices; verbatim original text",
+      "basis": "Unmodified NOTICE.toolchain from Android NDK 26.1.10909125, preserving original third-party copyrights/licenses for the statically linked unwind runtime and toolchain components. No project GPL relicensing is asserted.",
+      "sha256": "d503f647f76ba8dc538eeeb5b3851f61d46a7d1f7651fe580dab8f2fbeecbfe5",
+      "source_last_commit": "6786e1679de14239d274f909eacec5faaef4890b",
+      "source_last_change_date": "2026-10-30T19:15:26+08:00",
       "content_modified_for_export": false
     }
   ],
@@ -1906,25 +1917,19 @@
       "reason": "No private object database, config, reflogs, remotes or commit history is copied."
     }
   ],
-  "previous_source_project_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
-  "updated_utc": "2026-10-30T11:08:18.841198+00:00",
+  "previous_source_project_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
+  "updated_utc": "2026-10-30T11:15:59.126889+00:00",
   "source_update_review": {
-    "private_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
+    "private_commit": "6786e1679de14239d274f909eacec5faaef4890b",
     "modified_or_new_sources": [
-      "src/controller/org/local/aetherarms/ControllerLoadNotice.java",
-      "src/bridge/org/local/aetherarms/CoreOsd.java",
-      "native/core_osd.cpp",
       "native_osd.py",
       "config/native-osd.json",
-      "tests/NativeOsdAbiChecks.cpp",
-      "app_icon.py",
-      "check_alignment.py"
+      "native/NOTICE.toolchain"
     ],
-    "new_original_source_files": 7,
+    "new_original_source_files": 1,
     "native_binary_added": false,
     "private_history_exported": false,
-    "user_requested_icon_replacement": true,
-    "scope": "Reviewed GPL source plus explicitly authorized user-provided icon replacement; not whole-repository rights clearance."
+    "scope": "Preserve native runtime notices and lock their source archive/hash. User-provided icon is unchanged from the preceding authorized commit."
   },
   "user_supplied_assets": [
     {

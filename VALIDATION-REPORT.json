@@ -1,15 +1,15 @@
 {
-  "validated_utc": "2026-10-30T11:10:16.524980+00:00",
+  "validated_utc": "2026-10-30T11:15:59.977414+00:00",
   "result": "PASS_REVIEWED_SOURCE_AND_AUTHORIZED_ICON_UPDATE",
-  "scope": "Reviewed source and explicit user-provided icon replacement relative to remote 5e37695256f21caad3f4b87988822c9a55084f3b. Whole-repository rights are not independently cleared.",
-  "source_snapshot_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
+  "scope": "Reviewed source and explicit user-provided icon replacement relative to remote d264b60bb19f900fe1399403e5ab63259f717304. Whole-repository rights are not independently cleared.",
+  "source_snapshot_commit": "6786e1679de14239d274f909eacec5faaef4890b",
   "user_authorized_push": true,
   "whole_repository_publication_cleared": false,
   "complete_apk_buildable": false,
   "complete_corresponding_source": false,
-  "copied_original_files": 142,
+  "copied_original_files": 143,
   "copied_original_categories": {
-    "B": 139,
+    "B": 140,
     "A": 3
   },
   "added_or_updated_c_or_d_source_files": 0,
@@ -43,7 +43,8 @@
     "path": ".github/assets/app_icon.png",
     "sha256": "68cab1fe30f158b347f789ae6e15a1acefa99c361cbd1c22cee7bbcf5b9f9f95",
     "user_authorized_publication": true,
-    "general_artwork_reuse_license_specified": false
+    "general_artwork_reuse_license_specified": false,
+    "changed_in_this_commit": false
   },
   "private_native_apk_signing_material_added": false,
   "private_git_history_added": false,

@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 import struct
+import shutil
 import subprocess
 from check_alignment import inspect_elf
 
@@ -51,6 +52,14 @@ def prepare_native_osd(work, sdk, prefix, env, lock):
     ndk = Path(os.environ.get('AETHER_ANDROID_NDK',str(sdk/'ndk/26.1.10909125')))
     sysroot = ndk/'toolchains/llvm/prebuilt/linux-x86_64/sysroot'
     assert (sysroot/'usr/include/c++/v1/string').is_file(), 'NDK C++ headers/sysroot missing'
+    unwind = ndk/'toolchains/llvm/prebuilt/linux-x86_64/lib/clang/17/lib/linux/aarch64/libunwind.a'
+    assert hashlib.sha256(unwind.read_bytes()).hexdigest() == spec['libunwind_archive_sha256'], 'Review NDK unwind runtime change'
+    notice = ROOT/'native/NOTICE.toolchain'
+    assert hashlib.sha256(notice.read_bytes()).hexdigest() == spec['toolchain_notice_sha256']
+    licenses = work/'assets/native-osd-licenses'
+    licenses.mkdir(exist_ok=True)
+    shutil.copyfile(notice, licenses/'NOTICE.toolchain')
+
     flags = ['--target=aarch64-linux-android26','--sysroot='+str(sysroot),'-std=c++17','-O2',
              '-fno-termux-rpath','-nostdinc++','-isystem',str(sysroot/'usr/include/c++/v1'),'-nostdlib++',
              '-fvisibility=hidden','-Wl,-z,max-page-size=16384','-Wl,-z,common-page-size=16384',

@@ -1,6 +1,12 @@
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
 # Changelog
 
+## Native runtime notices — 2026-10-30
+
+- Preserve the complete unmodified NDK toolchain notice for the native helper's statically linked unwind runtime.
+- Lock the notice and unwind archive hashes; bundle the notice in the private APK and link it from Third-Party Notices.
+- Keep the user icon and JNI adapter bytes unchanged from the preceding update. No APK/runtime library is published.
+
 ## App icon and native controller OSD — 2026-10-30
 
 Reviewed source checkpoint `ea457249cb1fe527df9df1f0d7e3b378c255b732`.

@@ -35,7 +35,7 @@ Retained Java/Kotlin packages do not make these omitted prerequisites available.
 
 ## Private build versus public export
 
-The private checkpoint ea457249cb1fe527df9df1f0d7e3b378c255b732 built and passed its full host checks, and its APK was installed separately. Those results belong to the private project. They do not establish that this public source collection builds an APK.
+The private checkpoint 6786e1679de14239d274f909eacec5faaef4890b built and passed its full host checks, and its APK was installed separately. Those results belong to the private project. They do not establish that this public source collection builds an APK.
 
 The public export's own results are recorded in VALIDATION-REPORT.json. Runtime appearance, games, networking and native execution are not tested here.
 
@@ -46,3 +46,5 @@ Any future APK release needs component permissions, complete matching source/bui
 native_osd.py, native/core_osd.cpp, config/native-osd.json, check_alignment.py and tests/NativeOsdAbiChecks.cpp are included unchanged from the private project as preferred-form source. The native helper needs an Android/Termux clang toolchain, NDK 26.1 headers/sysroot, the pinned donor libc++ and core files, and the original private layout or equivalent explicit setup. Those binaries/toolchain are not bundled. It cannot build the combined APK. Its private ABI check does not load a core or launch a VM.
 
 app_icon.py additionally uses Pillow for deterministic image resizing and final APK pixel validation. Its canonical private app-assets input layout and the complete APK build pipeline are absent. The original user PNG is published only at .github/assets/app_icon.png under the recorded user authorization, without assigning a general artwork license.
+
+The helper's NDK unwind archive and full toolchain notice are additionally pinned by hash. native/NOTICE.toolchain is copied into the private APK and exposed through its existing Third-Party Notices index. A final notice-only APK rebuild verified those bytes and the 15 icon variants; the JNI adapter bytes remained identical to the fully host-checked build.

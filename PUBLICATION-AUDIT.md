@@ -110,8 +110,10 @@ The later correction updates five already allowlisted GPL adapter/test files wit
 
 ## Current native OSD and icon update
 
-The current manifest contains 142 original copies (3 A, 139 B). Seven newly selected B files comprise CoreOsd.java, the JNI C++ shim, native_osd.py, GPL core binding JSON, its NDK ABI check, app_icon.py and the previously optional check_alignment.py. Existing copyright/license texts remain intact. Both core function bindings are verified against pinned GPL donor binaries and the recorded upstream source; no proprietary legacy method implementation or binary is copied into these files.
+The current manifest contains 143 original copies (3 A, 140 B). Eight B files selected for the native/icon update comprise CoreOsd.java, the JNI C++ shim, native_osd.py, GPL core binding JSON, its NDK ABI check, app_icon.py, the previously optional check_alignment.py and the unmodified NDK NOTICE.toolchain. Existing copyright/license texts remain intact. Both core function bindings are verified against pinned GPL donor binaries and the recorded upstream source; no proprietary legacy method implementation or binary is copied into these files.
 
 The native bridge uses an internal, version-specific function ABI. Its source, binding guards and build/helper sources are provided, but upstream native binaries, NDK toolchain and the full application's missing source/resources remain absent. This is still not complete Corresponding Source for the hybrid APK.
 
 The single replacement app_icon.png was supplied and explicitly authorized for app/GitHub use and push by the user. It is outside the code A/B license counts; no independent ownership audit or general artwork reuse license is claimed. The four existing screenshots are unchanged and remain outside source rights review. This update does not declare the whole repository legally cleared.
+
+The native helper statically links the NDK unwind runtime. native/NOTICE.toolchain preserves the full NDK 26.1.10909125 toolchain notice verbatim; its hash and the unwind archive hash are recorded in the binding lock. The private APK bundles that notice and links it from Third-Party Notices. This composite license text is separate from the adapter's GPL grant. No runtime binary is uploaded.

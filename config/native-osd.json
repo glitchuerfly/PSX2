@@ -32,5 +32,8 @@
       "reference_call_va": 12246212,
       "reference_call_hex": "82140094"
     }
-  ]
+  ],
+  "ndk_version": "26.1.10909125",
+  "toolchain_notice_sha256": "d503f647f76ba8dc538eeeb5b3851f61d46a7d1f7651fe580dab8f2fbeecbfe5",
+  "libunwind_archive_sha256": "df0a38dace2c0b1b4cec84fb8c9300e03d950be501a1773932baed777f25e3be"
 }
