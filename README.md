@@ -1,52 +1,70 @@
 
-# 🎮 ARMSX2 Hybrid
+<p align="center">
+  <img src=".github/assets/app_icon.png" width="140" alt="ARMSX2 Hybrid Logo">
+</p>
 
-### Classic Interface. Modern Emulation Core.
+<h1 align="center">ARMSX2 Hybrid</h1>
 
-**ARMSX2 Hybrid** is an unofficial Android PlayStation 2 emulator project combining the familiar AetherSX2/NetherSX2 interface with the ARMSX2 emulation core.
+<p align="center">
+  <strong>Classic Interface. Modern Emulation Core.</strong>
+</p>
 
-The project aims to preserve the classic AetherSX2 experience while introducing modern features, enhanced customization, and a more flexible gaming experience on Android.
+<p align="center">
+  An unofficial Android PlayStation 2 emulator project combining
+  the familiar AetherSX2 interface with the ARMSX2 emulation core.
+</p>
 
-**Platform:** Android (ARM64)  
-**Development Status:** Active Development  
-**Release Status:** Pre-release
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Android-green" alt="Android">
+  <img src="https://img.shields.io/badge/Architecture-ARM64-blue" alt="ARM64">
+  <img src="https://img.shields.io/badge/Version-1.0.0--beta-orange" alt="Version">
+  <img src="https://img.shields.io/badge/Status-Active%20Development-yellow" alt="Status">
+</p>
 
 ---
 
-## ✨ Features
+## About
 
-### 🚀 ARMSX2 Emulation Core
+**ARMSX2 Hybrid** is an unofficial Android PlayStation 2 emulator project that combines the classic AetherSX2/NetherSX2-based frontend with the ARMSX2 emulation core.
 
-- Powered by the ARMSX2 emulation core.
-- Familiar AetherSX2/NetherSX2-based interface.
+The project focuses on preserving the familiar AetherSX2 user experience while introducing newer emulation technology, improved touchscreen controls, additional customization options, and modern features.
+
+ARMSX2 Hybrid is independently developed and is not an official release of ARMSX2, AetherSX2, NetherSX2, or PCSX2.
+
+---
+
+## Features
+
+### ARMSX2 Emulation Core
+
+- Powered by the ARMSX2 2.9.1 emulation core.
+- Classic AetherSX2/NetherSX2-based interface.
 - Graphics and emulator settings compatibility integration.
 - Hardware and software rendering options, subject to core support.
-- Improvements inherited from the integrated ARMSX2 core.
+- Performance and compatibility improvements inherited from the integrated core.
 
-### 🎮 Advanced Touchscreen Controls
+### Advanced Touchscreen Controls
 
-- **Dynamic Analog:** Floating virtual analog sticks that adapt to your touch position.
-- **Static Analog:** Traditional fixed-position analog controls.
-- **Custom Button Skins:** Customize the appearance of touchscreen buttons.
-- Adjustable touchscreen control layouts.
+- **Dynamic Analog:** Floating analog sticks that adapt to touch position.
+- **Static Analog:** Traditional fixed-position analog sticks.
+- **Custom Button Skins:** Customizable touchscreen button appearance.
+- Adjustable touchscreen layouts.
 - Multitouch input support.
 
-### 🖼️ Enhanced Game Library
+### Enhanced Game Library
 
 - Automatic game cover downloads.
-- 2D and 3D cover display modes.
+- 2D and 3D game cover display modes.
 - Familiar game library navigation.
-- Customizable visual experience.
+- Customizable library appearance.
 
-### 📡 Remote Play
+### Remote Play
 
 - Remote Play integration.
 - Designed to extend gameplay across connected devices.
-- Currently undergoing development and testing.
+- Experimental functionality undergoing testing and development.
 
-*Remote Play functionality and requirements may change during development.*
-
-### ⚙️ In-Game Features
+### In-Game Features
 
 - In-game quick menu.
 - Save State and Load State menu integration.
@@ -54,75 +72,97 @@ The project aims to preserve the classic AetherSX2 experience while introducing 
 - Software renderer toggle.
 - Customizable touchscreen controls.
 
-*Some emulator settings and features may still require additional compatibility work.*
+Some emulator settings and features may still require additional compatibility work.
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Game Library
 
-![ARMSX2 Hybrid Game Library](screenshots/library.png)
+<p align="center">
+  <img src=".github/assets/screenshots/library.png" width="85%" alt="Game Library">
+</p>
 
 ### Gameplay
 
-![ARMSX2 Hybrid Gameplay](screenshots/gameplay.png)
+<p align="center">
+  <img src=".github/assets/screenshots/gameplay.png" width="85%" alt="Gameplay">
+</p>
 
 ### Custom Button Skins
 
-![ARMSX2 Hybrid Custom Button Skins](screenshots/custom_buttons.png)
+<p align="center">
+  <img src=".github/assets/screenshots/custom_buttons.png" width="85%" alt="Custom Button Skins">
+</p>
 
 ### Remote Play
 
-![ARMSX2 Hybrid Remote Play](screenshots/remote_play.png)
+<p align="center">
+  <img src=".github/assets/screenshots/remote_play.png" width="85%" alt="Remote Play">
+</p>
 
 ---
 
-## 🧪 Development Status
+## Development Status
+
+**Current Version:** 1.0.0-beta
 
 ARMSX2 Hybrid is currently under active development.
 
-### Current Development Priorities
+### Development Priorities
 
 - Improving emulator settings compatibility.
-- Refining dynamic and static analog controls.
+- Refining touchscreen controls and customization.
 - Expanding custom button skin support.
 - Testing Remote Play stability and performance.
 - Improving game compatibility and stability.
-- Preparing for a future public release.
+- Preparing for future public releases.
 
 Performance and compatibility may vary depending on the game, device, and emulator configuration.
 
 ---
 
-## 📦 Downloads
+## Downloads
 
-**No public APK is available at this time.**
+**Public APK downloads are not available at this time.**
 
-Future release information will be published here once the application is ready for distribution and applicable licensing requirements have been addressed.
+Release information will be published once the application is ready for distribution and the applicable licensing requirements have been addressed.
 
 ---
 
-## 📜 Credits & Acknowledgements
+## Source Code
 
-ARMSX2 Hybrid builds upon the work of several emulator projects.
+This repository contains selected source code, integration components, tests, and documentation from the ARMSX2 Hybrid project.
+
+The published source is a partial source preview and does not represent the complete buildable source code of the combined application.
+
+Some legacy components are excluded due to unresolved licensing and redistribution requirements.
+
+See [Publication Audit](PUBLICATION-AUDIT.md) for more information.
+
+---
+
+## Credits & Acknowledgements
+
+ARMSX2 Hybrid builds upon the work of several emulator projects:
 
 - **[PCSX2](https://github.com/PCSX2/pcsx2)** — PlayStation 2 emulation technology.
 - **[ARMSX2](https://github.com/ARMSX2/ARMSX2)** — ARMSX2 emulation core.
 - **AetherSX2** — Original Android emulator foundation and interface.
 - **[NetherSX2](https://github.com/Trixarian/NetherSX2-patch)** — Modifications and improvements to AetherSX2.
 
-Special thanks to the emulator development community.
+Special thanks to the developers and contributors of these projects.
 
 ---
 
-## ⚖️ Legal & Licensing
+## Legal & Licensing
 
 ARMSX2 Hybrid is an independent, unofficial community project.
 
 This project is not affiliated with, sponsored by, or endorsed by Sony Interactive Entertainment, PCSX2, ARMSX2, AetherSX2, or NetherSX2.
 
-The ARMSX2 core is subject to its applicable GNU General Public License terms. Other components may have separate licensing and redistribution restrictions.
+The ARMSX2 core is subject to the GNU General Public License. Other components may have separate licensing and redistribution restrictions.
 
 The licensing requirements of the combined application are being reviewed before any public binary release.
 
@@ -132,6 +172,10 @@ PlayStation and PlayStation 2 are trademarks of Sony Interactive Entertainment.
 
 ---
 
-### ❤️ Made for the PS2 Emulation Community
+<p align="center">
+  <strong>Made for the PS2 Emulation Community</strong>
+</p>
 
-**Classic experience. Modern core. More possibilities.**
+<p align="center">
+  <em>Classic experience. Modern core. More possibilities.</em>
+</p>
