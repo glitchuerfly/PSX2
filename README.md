@@ -61,19 +61,19 @@ Some emulator settings and features may still require additional compatibility w
 
 Game Library
 
-"ARMSX2 Hybrid Game Library" (screen%20shot/library.png)
+"ARMSX2 Hybrid Game Library" (screenshots/library.png)
 
 Gameplay
 
-"ARMSX2 Hybrid Gameplay" (screen%20shot/gameplay.png)
+"ARMSX2 Hybrid Gameplay" (screenshots/gameplay.png)
 
 Custom Button Skins
 
-"ARMSX2 Hybrid Custom Button Skins" (screen%20shot/custom-buttons.png)
+"ARMSX2 Hybrid Custom Button Skins" (screenshots/custom-buttons.png)
 
 Remote Play
 
-"ARMSX2 Hybrid Remote Play" (screen%20shot/remote-play.png)
+"ARMSX2 Hybrid Remote Play" (screenshots/remote-play.png)
 
 ---
 
