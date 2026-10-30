@@ -1,5 +1,5 @@
 {
-  "scope": "Pre-existing remote visual assets only; no artwork redistribution clearance established by the source review.",
+  "scope": "Four pre-existing remote screenshots remain unverified. The app icon was replaced by the new user-provided PNG under an explicit publication/push instruction. Artwork is separate from the source-code GPL grant.",
   "assets": [
     {
       "path": ".github/assets/screenshots/custom_buttons.png",
@@ -28,17 +28,22 @@
       "reason": "Unexpected screenshot outside audit allowlist; redistribution rights not verified; not copied by this export operation.",
       "preexisting_remote_commit": "1c095595da5e659c0a6ad00464ab9da894b9e169",
       "changed_by_this_update": false
-    },
+    }
+  ],
+  "user_supplied_assets": [
     {
       "path": ".github/assets/app_icon.png",
-      "original_path": "aether-armsx2-port/inputs/legacy/decoded/res/mipmap-xxxhdpi/ic_launcher.png",
-      "sha256": "52302505e71197a20adcca936ab2ae56e31e164757681818f70f741e0cec5580",
-      "audit_category": "C",
-      "user_requested_local_copy": true,
-      "publication_cleared": false,
-      "reason": "App artwork from legacy input; no separate artwork redistribution grant established. Explicit local copy request does not establish copyright/trademark rights.",
-      "preexisting_remote_commit": "1c095595da5e659c0a6ad00464ab9da894b9e169",
-      "changed_by_this_update": false
+      "source": "User-provided /sdcard/app_icon.png",
+      "sha256": "68cab1fe30f158b347f789ae6e15a1acefa99c361cbd1c22cee7bbcf5b9f9f95",
+      "dimensions": [
+        512,
+        512
+      ],
+      "user_authorized_publication": true,
+      "authorization": "User explicitly requested updating the app and GitHub icon and pushing Git on 2026-10-30",
+      "artwork_license": "No separate reuse license specified; excluded from the source-code GPL grant",
+      "rights_independently_verified": false,
+      "replaces_legacy_icon_sha256": "52302505e71197a20adcca936ab2ae56e31e164757681818f70f741e0cec5580"
     }
   ]
 }

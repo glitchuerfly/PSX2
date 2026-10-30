@@ -1,7 +1,7 @@
 {
   "format": 1,
   "created_utc": "2026-10-30T09:15:21.320945+00:00",
-  "source_project_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
+  "source_project_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
   "upstream_commit": "ba9d8460a56889180b999c52131c48fb5b4ab77a",
   "scope": "Partial audited source export; NOT complete Corresponding Source for the hybrid APK.",
   "selection_policy": "Explicit A/B allowlist; C/D and conservative generated-data holds omitted.",
@@ -1465,9 +1465,9 @@
       "audit_category": "B",
       "license": "GPL-3.0-or-later",
       "basis": "Reviewed original hybrid Java/test source added after the initial audit; explicit SPDX grant retained. Contains adapter logic or artwork identifiers only; no decoded implementation, artwork pixels or copied vector paths.",
-      "sha256": "50ae83a78bf79f7ae3a83a550ed1e9d59c18f2fbb475b21a2448b2a73d264014",
-      "source_last_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
-      "source_last_change_date": "2026-10-30T18:46:06+08:00",
+      "sha256": "86044cca9996d5b20b78a28f6ed68c31271ec5df5b8e98cf16a057fdcb4b9248",
+      "source_last_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
+      "source_last_change_date": "2026-10-30T19:07:04+08:00",
       "content_modified_for_export": false
     },
     {
@@ -1490,6 +1490,83 @@
       "sha256": "838325ec84e7091affaa47443060b3e40016e403b69e252f50b3628ec34d059d",
       "source_last_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
       "source_last_change_date": "2026-10-30T18:46:06+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/CoreOsd.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/CoreOsd.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Reviewed original hybrid integration/helper/test source under explicit GPL-3.0-or-later grant. Native binding metadata is derived from the pinned GPL ARMSX2 source/core, not proprietary legacy code; no native binaries are included.",
+      "sha256": "3e6cb4daea050540883238f2ee822ef76946e36f5cf5e52565ae94219c314249",
+      "source_last_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
+      "source_last_change_date": "2026-10-30T19:07:04+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "native/core_osd.cpp",
+      "original_path": "aether-armsx2-port/native/core_osd.cpp",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Reviewed original hybrid integration/helper/test source under explicit GPL-3.0-or-later grant. Native binding metadata is derived from the pinned GPL ARMSX2 source/core, not proprietary legacy code; no native binaries are included.",
+      "sha256": "d40cda199b2514d8599a22318b95b3662711373b35a21e8447d3d3feadb27681",
+      "source_last_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
+      "source_last_change_date": "2026-10-30T19:07:04+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "native_osd.py",
+      "original_path": "aether-armsx2-port/native_osd.py",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Reviewed original hybrid integration/helper/test source under explicit GPL-3.0-or-later grant. Native binding metadata is derived from the pinned GPL ARMSX2 source/core, not proprietary legacy code; no native binaries are included.",
+      "sha256": "be2bab9920a82913609161a871540662dd24d9fe514204a3a1f9c5f8ca414a53",
+      "source_last_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
+      "source_last_change_date": "2026-10-30T19:07:04+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "config/native-osd.json",
+      "original_path": "aether-armsx2-port/config/native-osd.json",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Reviewed original hybrid integration/helper/test source under explicit GPL-3.0-or-later grant. Native binding metadata is derived from the pinned GPL ARMSX2 source/core, not proprietary legacy code; no native binaries are included.",
+      "sha256": "26e415e8eb66ae3264ca91a248ac190702a91c237950012be2a9d769b65b5a29",
+      "source_last_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
+      "source_last_change_date": "2026-10-30T19:07:04+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "tests/NativeOsdAbiChecks.cpp",
+      "original_path": "aether-armsx2-port/tests/NativeOsdAbiChecks.cpp",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Reviewed original hybrid integration/helper/test source under explicit GPL-3.0-or-later grant. Native binding metadata is derived from the pinned GPL ARMSX2 source/core, not proprietary legacy code; no native binaries are included.",
+      "sha256": "bf8d5f30e9e9537f386f673bfd7749ef09b575d963389dbf6ae266e7ee2d1110",
+      "source_last_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
+      "source_last_change_date": "2026-10-30T19:07:04+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "app_icon.py",
+      "original_path": "aether-armsx2-port/app_icon.py",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Reviewed original hybrid integration/helper/test source under explicit GPL-3.0-or-later grant. Native binding metadata is derived from the pinned GPL ARMSX2 source/core, not proprietary legacy code; no native binaries are included.",
+      "sha256": "a73bce7c27bca6b44695b1c52d856aec00b4ec5a22a104a45228df996ae13d0f",
+      "source_last_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
+      "source_last_change_date": "2026-10-30T19:07:04+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "check_alignment.py",
+      "original_path": "aether-armsx2-port/check_alignment.py",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Earlier audit B; original adapter Python GPL declaration retained. Pure ELF/APK alignment reader reviewed without signing material or proprietary implementation.",
+      "sha256": "955ef3b7c4ede96cbf79776f5e5927c3b0b29856655d1776269c475658d8743d",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
       "content_modified_for_export": false
     }
   ],
@@ -1554,11 +1631,6 @@
       "original_path": "aether-armsx2-port/build.py",
       "original_audit_category": "C",
       "reason": "Unresolved legacy native/Smali integration and signing-password arguments; not copied."
-    },
-    {
-      "original_path": "aether-armsx2-port/check_alignment.py",
-      "original_audit_category": "B",
-      "reason": "Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline."
     },
     {
       "original_path": "aether-armsx2-port/compile-stubs/androidx/preference/Preference.java",
@@ -1834,20 +1906,40 @@
       "reason": "No private object database, config, reflogs, remotes or commit history is copied."
     }
   ],
-  "previous_source_project_commit": "a2de3945e2404dc8a26e221c70a16976492ef4a2",
-  "updated_utc": "2026-10-30T10:46:25.878197+00:00",
+  "previous_source_project_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
+  "updated_utc": "2026-10-30T11:08:18.841198+00:00",
   "source_update_review": {
-    "private_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
+    "private_commit": "ea457249cb1fe527df9df1f0d7e3b378c255b732",
     "modified_or_new_sources": [
-      "src/bridge/org/local/aetherarms/Bridge.java",
-      "src/controller/org/local/aetherarms/ControllerLayoutAccess.java",
-      "src/controller/org/local/aetherarms/ControllerSettings.java",
       "src/controller/org/local/aetherarms/ControllerLoadNotice.java",
-      "tests/SkinLoadChecks.java"
+      "src/bridge/org/local/aetherarms/CoreOsd.java",
+      "native/core_osd.cpp",
+      "native_osd.py",
+      "config/native-osd.json",
+      "tests/NativeOsdAbiChecks.cpp",
+      "app_icon.py",
+      "check_alignment.py"
     ],
-    "new_original_source_files": 0,
-    "binary_assets_added": false,
+    "new_original_source_files": 7,
+    "native_binary_added": false,
     "private_history_exported": false,
-    "scope": "Controller correction source delta only. Existing remote visual assets remain outside A/B source rights review."
-  }
+    "user_requested_icon_replacement": true,
+    "scope": "Reviewed GPL source plus explicitly authorized user-provided icon replacement; not whole-repository rights clearance."
+  },
+  "user_supplied_assets": [
+    {
+      "path": ".github/assets/app_icon.png",
+      "source": "User-provided /sdcard/app_icon.png",
+      "sha256": "68cab1fe30f158b347f789ae6e15a1acefa99c361cbd1c22cee7bbcf5b9f9f95",
+      "dimensions": [
+        512,
+        512
+      ],
+      "user_authorized_publication": true,
+      "authorization": "User explicitly requested updating the app and GitHub icon and pushing Git on 2026-10-30",
+      "artwork_license": "No separate reuse license specified; excluded from the source-code GPL grant",
+      "rights_independently_verified": false,
+      "replaces_legacy_icon_sha256": "52302505e71197a20adcca936ab2ae56e31e164757681818f70f741e0cec5580"
+    }
+  ]
 }

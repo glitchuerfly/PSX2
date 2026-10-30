@@ -16,7 +16,6 @@ The table lists all 59 tracked files from the private hybrid snapshot that are n
 | `aether-armsx2-port/app-assets/notices/style.css` | A | Optional internal document, metadata, styling or provenance not needed by this partial source export. |
 | `aether-armsx2-port/backup-project.py` | B | Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline. |
 | `aether-armsx2-port/build.py` | C | Unresolved legacy native/Smali integration and signing-password arguments; not copied. |
-| `aether-armsx2-port/check_alignment.py` | B | Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline. |
 | `aether-armsx2-port/compile-stubs/androidx/preference/Preference.java` | C | ABI reconstruction or test-stub grant not sufficiently established. |
 | `aether-armsx2-port/config/analog-translations.json` | C | Mapping/translation provenance not resolved per entry. |
 | `aether-armsx2-port/config/app.json` | A | Optional internal document, metadata, styling or provenance not needed by this partial source export. |
@@ -94,3 +93,5 @@ NetherSX2-patch licensing does not resolve rights over AetherSX2. Rights over na
 ## Later source updates
 
 The exclusion tables above record the initial audit snapshot. Later source additions are individually reviewed and recorded in PUBLICATION-MANIFEST.json. The private controller hook/build scripts, controller Default PNGs and their provenance payload, private reports, native binaries, signing material and backups remain omitted. Existing remote README visual assets are separately listed in .github/assets/ASSET-REVIEW.json; their rights are not cleared by the source allowlist.
+
+The previously optional audit-B check_alignment.py is now included for the native shim's ELF validation. The reviewed native/icon helpers, C++ source and GPL binding metadata are also included; private build.py, decoded hooks, native binaries, signing material and application data remain excluded. The new user PNG is recorded separately from source-license categories.

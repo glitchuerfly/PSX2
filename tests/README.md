@@ -25,3 +25,5 @@ Reference-only sources retain their original tests but are not executed:
 The private full-suite Python runners are not copied because they require the private layout, decoded resources, and excluded build artifacts.
 
 Checks do not validate Android rendering, app lifecycle on a phone, a complete emulator build, native execution, network connectivity, gameplay, or licensing legality.
+
+NativeOsdAbiChecks.cpp is also reference-only in this export. The private native_osd.py build runs it with Android NDK headers and the pinned donor libc++ runtime to validate the 24-byte short/long string ABI and move/destruction behavior. It does not load the emulator or run a game. Those binary/toolchain dependencies are not supplied, so it is not part of the four-suite JDK runner.

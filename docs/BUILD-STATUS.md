@@ -18,7 +18,7 @@ The runner compiles seven included policy classes and four unchanged test classe
 
 On Termux, the runner uses PREFIX/lib for child-process library lookup when PREFIX is available. It creates and removes its temporary class files inside this export. It performs no ADB/device interaction, network access or APK build.
 
-Seven additional test files are archived under tests/reference. Their prerequisites are documented in tests/README.md and are not claimed to pass in this export.
+Seven additional Java test files are archived under tests/reference. NativeOsdAbiChecks.cpp is an additional reference-only native ABI check under tests/. Their prerequisites are documented in tests/README.md and are not claimed to pass in this export.
 
 ## Deliberately absent prerequisites
 
@@ -35,8 +35,14 @@ Retained Java/Kotlin packages do not make these omitted prerequisites available.
 
 ## Private build versus public export
 
-The private checkpoint 1e475c4a45930b2e784582f42f5885751c47c01c built and passed its full host checks, and its APK was installed separately. Those results belong to the private project. They do not establish that this public source collection builds an APK.
+The private checkpoint ea457249cb1fe527df9df1f0d7e3b378c255b732 built and passed its full host checks, and its APK was installed separately. Those results belong to the private project. They do not establish that this public source collection builds an APK.
 
 The public export's own results are recorded in VALIDATION-REPORT.json. Runtime appearance, games, networking and native execution are not tested here.
 
 Any future APK release needs component permissions, complete matching source/build materials, license notices, and a suitable GPL source-access arrangement. A link to this partial export would not meet that need by itself.
+
+## Native OSD and launcher tool sources
+
+native_osd.py, native/core_osd.cpp, config/native-osd.json, check_alignment.py and tests/NativeOsdAbiChecks.cpp are included unchanged from the private project as preferred-form source. The native helper needs an Android/Termux clang toolchain, NDK 26.1 headers/sysroot, the pinned donor libc++ and core files, and the original private layout or equivalent explicit setup. Those binaries/toolchain are not bundled. It cannot build the combined APK. Its private ABI check does not load a core or launch a VM.
+
+app_icon.py additionally uses Pillow for deterministic image resizing and final APK pixel validation. Its canonical private app-assets input layout and the complete APK build pipeline are absent. The original user PNG is published only at .github/assets/app_icon.png under the recorded user authorization, without assigning a general artwork license.

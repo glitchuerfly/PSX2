@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
 # Publication audit — selected source export
 
-> Source-delta review update: the five visual assets already present at remote commit 1c095595da5e659c0a6ad00464ab9da894b9e169 remain outside the audited A/B source allowlist. This update does not add or change those assets and does not clear their rights. See .github/assets/ASSET-REVIEW.json and VALIDATION-REPORT.json. No APK or ZIP release is produced.
+> Current update: four pre-existing remote screenshots remain unverified. The old legacy icon has been replaced by the PNG explicitly supplied and authorized for publication by the user. No separate artwork reuse license is asserted. New JNI/build/test source and GPL core binding metadata were reviewed separately; no native binary or APK is added. See .github/assets/ASSET-REVIEW.json and VALIDATION-REPORT.json.
 
 Prepared on 2026-10-30 from private project commit f0276fa2804f9174492b69f7cebbcf4c338bcc86.
 
@@ -9,7 +9,7 @@ Prepared on 2026-10-30 from private project commit f0276fa2804f9174492b69f7cebbc
 
 ## Source update review — 2026-10-30
 
-The current source snapshot is `1e475c4a45930b2e784582f42f5885751c47c01c`. It contains 135 original file copies (3 A, 132 B): the original 131-file selection plus ControllerBindingIcons.java, ControllerLoadNotice.java, SkinLoadState.java and SkinLoadChecks.java. Each new file was inspected as original adapter/test logic with an explicit GPL-3.0-or-later header; it contains no recovered legacy implementation, copied vector path, artwork pixels or binary. Nine previously allowlisted source files were refreshed from the current private checkpoint. Full per-file hashes and provenance are in PUBLICATION-MANIFEST.json.
+The earlier controller snapshot was `1e475c4a45930b2e784582f42f5885751c47c01c`. It contains 135 original file copies (3 A, 132 B): the original 131-file selection plus ControllerBindingIcons.java, ControllerLoadNotice.java, SkinLoadState.java and SkinLoadChecks.java. Each new file was inspected as original adapter/test logic with an explicit GPL-3.0-or-later header; it contains no recovered legacy implementation, copied vector path, artwork pixels or binary. Nine previously allowlisted source files were refreshed from the current private checkpoint. Full per-file hashes and provenance are in PUBLICATION-MANIFEST.json.
 
 The source delta and vendor/license hashes passed validation. Four public host suites passed without a device, downloads or networking. Existing remote visual assets remain unchanged and unverified, so this is a source-delta validation, not whole-repository publication clearance. The user-requested push uses a separate writable workspace checkout and preserves the latest remote README commit. Private source history is represented only by provenance commit identifiers, not uploaded Git objects.
 
@@ -107,3 +107,11 @@ Approval to upload has not been given. Whole-APK redistribution, mixed GPL/legac
 ## Controller correction source delta
 
 The later correction updates five already allowlisted GPL adapter/test files without adding source categories, native binaries or assets. The same 135 original copies (3 A, 132 B) remain covered by per-file hashes/provenance. Real-format tests now cover per-game notification ON/OFF/missing and preboot identity selection; the partial APK-build limitation and unresolved pre-existing remote asset rights are unchanged.
+
+## Current native OSD and icon update
+
+The current manifest contains 142 original copies (3 A, 139 B). Seven newly selected B files comprise CoreOsd.java, the JNI C++ shim, native_osd.py, GPL core binding JSON, its NDK ABI check, app_icon.py and the previously optional check_alignment.py. Existing copyright/license texts remain intact. Both core function bindings are verified against pinned GPL donor binaries and the recorded upstream source; no proprietary legacy method implementation or binary is copied into these files.
+
+The native bridge uses an internal, version-specific function ABI. Its source, binding guards and build/helper sources are provided, but upstream native binaries, NDK toolchain and the full application's missing source/resources remain absent. This is still not complete Corresponding Source for the hybrid APK.
+
+The single replacement app_icon.png was supplied and explicitly authorized for app/GitHub use and push by the user. It is outside the code A/B license counts; no independent ownership audit or general artwork reuse license is claimed. The four existing screenshots are unchanged and remain outside source rights review. This update does not declare the whole repository legally cleared.

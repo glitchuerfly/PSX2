@@ -1,6 +1,18 @@
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
 # Changelog
 
+## App icon and native controller OSD — 2026-10-30
+
+Reviewed source checkpoint `ea457249cb1fe527df9df1f0d7e3b378c255b732`.
+
+- Replace the app/GitHub icon with the user's explicitly supplied 512x512 PNG. The GitHub PNG preserves the exact supplied bytes; artwork is separate from the source GPL grant.
+- Generate and verify all 15 launcher/round/foreground bitmap variants in the private APK.
+- Remove the Android controller-notice overlay. CoreOsd posts into the original core OSD queue, sharing patch-message scale, font, stacking, fading and rendering behind touchscreen controls.
+- Prefix the configuration line with FontAwesome U+F11B (controller), matching the core icon-message format. Enabled per-game-only/once-per-session conditions remain.
+- Include the JNI shim's preferred source, pinned GPL core binding data, build helpers and a pure NDK string-ABI regression source. Both donor variants are guarded by hash/anchor/call-site/prefix checks; original donor binaries remain unchanged.
+
+The new native shim is 16 KB aligned and has no Termux RPATH. Full private build/host checks pass; game rendering is user-tested. The complete APK is still not buildable from this partial repository and no APK/native binary is uploaded.
+
 ## Controller startup correction — 2026-10-30
 
 Reviewed source checkpoint `1e475c4a45930b2e784582f42f5885751c47c01c`.

@@ -37,7 +37,7 @@ The initial layout resolves the controller profile file from the launch entry CR
 
 SkinLoadState orders selections before main-thread dispatch, rejects obsolete decodes and publishes images/masks atomically. SkinStore caches two skins and keeps cold custom art pending rather than rendering Default. Controller-port icon code refers to Default resource identifiers; PNGs and legacy hooks are omitted.
 
-ControllerLoadNotice is a small Android UI overlay, since the pinned donor does not export a JNI arbitrary-OSD-message API. It waits for successful controller/native commit, presented game frames and ready skin, respects the OSD message switch/scale, and clears on background/session end. The core binaries remain unchanged. Its actual rendering and startup behavior are user-tested in the private app, not by this source export's host tests.
+ControllerLoadNotice waits for successful controller/native commit, presented game frames and ready skin, then posts through CoreOsd to the native queue described below. Its rendering and startup behavior are user-tested in the private app, not by this export's host tests.
 
 ### Startup correction
 
@@ -46,3 +46,11 @@ ControllerLayoutAccess.prepareLaunch runs after the original Activity's host vie
 A missing game-list CRC can use the first nonzero boot identity remembered by exact launch path and matching serial, or one unambiguous existing serial/CRC profile pair. Current native identity supersedes hints; multiple ELF candidates are never guessed and an ended session's CRC is not reused as active state.
 
 The left-column configuration acknowledgement requires Pad/UseGameSettingsForController to be enabled in the game's own profile. Global controller settings alone, a missing profile or a disabled switch do not produce that notice.
+
+## Current native OSD integration
+
+ControllerLoadNotice calls CoreOsd.post, which loads the small JNI libhybridosd adapter. Its C++ code locates the already loaded donor variant, checks its exported load-base anchor and 64-byte function prefix, then calls the original Host::AddKeyedOSDMessage function using the NDK string ABI. The original thread-safe core queue supplies message ordering, font, scale, cutout margins, fading and rendering beneath Android touch controls. The U+F11B gamepad prefix and two spaces match the existing icon-message format.
+
+config/native-osd.json pins the two core hashes, the libc++ hash and executable call-site/function data. native_osd.py rejects an unreviewed donor, builds the shim and checks 16 KB ELF layout and absence of build-machine RPATH. A pure NDK ABI check tests short/long strings and ownership using the donor libc++, without loading the emulator or starting a VM. Runtime guards reject unsupported bindings. A future core update requires binding/ABI review; the internal function address is not a stable upstream API.
+
+app_icon.py preserves the user PNG separately and produces five density sets of three bitmap slots. Its APK check compares decoded image pixels, allowing aapt PNG crunching without accepting an old icon. The GitHub asset is the original supplied PNG, not a resized launcher variant.

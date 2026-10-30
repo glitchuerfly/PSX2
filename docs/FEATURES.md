@@ -19,6 +19,8 @@ The latest included pause-menu change calls the existing host page transaction w
 
 No game compatibility, performance, image quality, networking, or complete emulator runtime claim is established by the public host checks.
 
-The controller startup update shares profile-file selection between core settings and the initial legacy controller layout. It includes atomic artwork/cache state and stale-selection guards. ControllerLoadNotice provides a short Android overlay after successful configuration/native commit, using the OSD message switch/scale; it does not insert into the donor's native OSD queue. The private legacy hook, Default PNG assets and Android host remain excluded, so the exported source alone cannot demonstrate this UI behavior.
+The controller startup path prepares the real layout before VM startup, shares profile selection with core input configuration and refreshes reused views immediately. It includes atomic artwork/cache state and stale-selection guards.
 
-The corrected startup path prepares the actual controller before VM startup and refreshes reused views immediately. The configuration acknowledgement is at the left and is limited to an enabled per-game controller configuration; global-only configuration does not trigger it.
+ControllerLoadNotice posts an enabled per-game configuration acknowledgement through CoreOsd to the original core OSD queue with a controller glyph. It uses the core's font/scale/stack/fade and renders behind touchscreen controls. CoreOsd.java, native/core_osd.cpp, config/native-osd.json and native_osd.py are included as partial integration source; their compiled shim/core binaries, private hooks and Default runtime PNGs remain absent.
+
+The private app and GitHub icon use the supplied PNG. The exported source alone cannot demonstrate the running UI or build the complete APK.

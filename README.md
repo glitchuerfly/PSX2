@@ -50,7 +50,7 @@ ARMSX2 Hybrid is independently developed and is not an official release of ARMSX
 - **Custom Button Skins:** Customizable touchscreen button appearance.
 - Adjustable touchscreen layouts.
 - Controller layout and added/removed buttons are prepared before the VM starts; reused layouts also refresh visibility.
-- Per-game controller configuration acknowledgement in the left OSD column, shown only when that game configuration is enabled.
+- Enabled per-game controller configuration acknowledgement shares the core OSD queue with patch messages, including a controller icon.
 - Multitouch input support.
 
 ### Enhanced Game Library

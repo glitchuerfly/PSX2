@@ -47,3 +47,9 @@ This is an unofficial integration source archive. No trademark permission, endor
 ## Controller startup update
 
 The later hybrid source update adds original controller-store selection, configuration acknowledgement and artwork-loading state/regression logic under the retained GPL-3.0-or-later declarations. ControllerBindingIcons contains resource identifiers and original label rendering; the upstream Default artwork is not included. These source changes do not grant rights to legacy app assets or existing README screenshots/icon.
+
+## Native OSD and supplied app icon
+
+CoreOsd calls the original ARMSX2/PCSX2 Host OSD queue, using the pinned GPL source provenance recorded in config/native-osd.json. The integration shim/helpers retain GPL-3.0-or-later notices; they do not claim authorship of the core renderer. The controller marker uses the existing core FontAwesome ICON_FA_GAMEPAD glyph (U+F11B), without adding a font or controller-image asset.
+
+The replacement .github/assets/app_icon.png was provided by the user for the application and this repository. Publication was explicitly requested; a separate general artwork reuse license has not been specified. The source-code GPL declaration does not relicense the icon.

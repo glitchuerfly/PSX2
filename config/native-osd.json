@@ -1,0 +1,36 @@
+{
+  "license": "GPL-3.0-or-later",
+  "donor_apk_sha256": "b98e9fd76347f50b8eb30e0af083cbb69336b5588c4375de8983225f2719b3cc",
+  "libcxx_sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b",
+  "upstream_source_commit": "ba9d8460a56889180b999c52131c48fb5b4ab77a",
+  "source_evidence": [
+    "pcsx2/Host.h:AddKeyedOSDMessage",
+    "pcsx2/ImGui/ImGuiManager.cpp:AddKeyedOSDMessage",
+    "platforms/android/app/src/main/cpp/native-lib.cpp:Host::OnGameChanged"
+  ],
+  "binding": "AArch64 Android NDK libc++ std::__ndk1 string ABI; pinned core function called by its existing native OSD notice; no donor binary modifications",
+  "variants": [
+    {
+      "library": "libemucore_4k.so",
+      "sha256": "7236a7c3ea302bb66b442a5c582fa9367e756443f0ce11a239a5a2c889361d4c",
+      "anchor_symbol": "Java_kr_co_iefriends_pcsx2_NativeApp_runVMThread",
+      "anchor_va": 15749188,
+      "function": "Host::AddKeyedOSDMessage(std::string,std::string,float)",
+      "function_va": 12267892,
+      "function_prefix_hex": "ffc302d1e83b00fdfd7b08a9f65709a9f44f0aa9fd03029155d03bd50840201ef40300aaa81640f9f30301aaa8831ef809004039080440f92afd41d33f010072",
+      "reference_call_va": 12246892,
+      "reference_call_hex": "82140094"
+    },
+    {
+      "library": "libemucore_16k.so",
+      "sha256": "4fefcbed98d495b917ec861b4f4b3e4cc5d2b11bdf956adc031c9ec1e9ddd077",
+      "anchor_symbol": "Java_kr_co_iefriends_pcsx2_NativeApp_runVMThread",
+      "anchor_va": 15749600,
+      "function": "Host::AddKeyedOSDMessage(std::string,std::string,float)",
+      "function_va": 12267212,
+      "function_prefix_hex": "ffc302d1e83b00fdfd7b08a9f65709a9f44f0aa9fd03029155d03bd50840201ef40300aaa81640f9f30301aaa8831ef809004039080440f92afd41d33f010072",
+      "reference_call_va": 12246212,
+      "reference_call_hex": "82140094"
+    }
+  ]
+}
