@@ -1,0 +1,6 @@
+The new adapter sources in src/, diagnostics/, and the project Python scripts are licensed under
+GNU GPL version 3 or later. The full license is in COPYING.GPLv3.
+
+This license does not relicense the original AetherSX2/NetherSX2 APK, its Smali,
+its native library, or its artwork. This is a private local integration prototype.
+Each upstream dependency retains its own license and notices.

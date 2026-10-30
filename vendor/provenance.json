@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/ARMSX2/ARMSX2",
+  "commit": "ba9d8460a56889180b999c52131c48fb5b4ab77a",
+  "files": {
+    "upstream-java/kr/co/iefriends/pcsx2/ContentChdFiles.java": "8782bcf14373688e42de53eeb22c52917824ffdec649396c053f3512b566aca0",
+    "upstream-java/kr/co/iefriends/pcsx2/HttpClient.java": "2dcbdbeddb79d2ce8b1cb71945d944ebdc2064c1588a63649641415cb65d2c44",
+    "upstream-java/org/libsdl/app/HIDDevice.java": "afdeaf583f051583eff5cc9dcbfb983e3e8923e66d1130ff3e30c21afc8f87f1",
+    "upstream-java/org/libsdl/app/HIDDeviceBLESteamController.java": "7ebeda5ab9605d890325f0e1aff011cc20ebe32d19aaa98eda0c800ebde5a96c",
+    "upstream-java/org/libsdl/app/HIDDeviceManager.java": "208d7ade6fc6cc0792636488c737487030d527852802a569de96b46cd05d20dc",
+    "upstream-java/org/libsdl/app/HIDDeviceUSB.java": "45a1ecd525bd700adbfe529737fe95cce4b449730fc80fcee7bfebe56200550c",
+    "upstream-java/org/libsdl/app/SDL.java": "49d13bd76b65b40bc13b8f4ff1333ecf9fc5473a57bb2d216e2a60dc2e5973a4",
+    "upstream-java/org/libsdl/app/SDLActivity.java": "a0c4e37753c63206a68fb831db719ee6e9970ecf940557589413545cb32233b8",
+    "upstream-java/org/libsdl/app/SDLAudioManager.java": "129990250d389bc6550c1a27a81ee9a4cc32a4d6e9080f2fe466480988f214eb",
+    "upstream-java/org/libsdl/app/SDLControllerManager.java": "b874063ff6807c0ed453c6281cddb6b22347d6625ecc199cc1d6a48d118aa1b4",
+    "upstream-java/org/libsdl/app/SDLDummyEdit.java": "fb777fa4b4cce4d328229014acf156c2c2f47445dacccd5f74f876a64cdf502b",
+    "upstream-java/org/libsdl/app/SDLInputConnection.java": "7079f65944ce0f6e8e3ca0293fc79c1e4e050f3b4290c39990723e3a0e40bc9b",
+    "upstream-java/org/libsdl/app/SDLSurface.java": "01bc47885f4ef7ea7f53636e6be9300306770d879605fb140c30bed030dbd5bb"
+  }
+}

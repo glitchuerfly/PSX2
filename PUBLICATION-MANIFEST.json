@@ -1,0 +1,1793 @@
+{
+  "format": 1,
+  "created_utc": "2026-10-30T09:15:21.320945+00:00",
+  "source_project_commit": "f0276fa2804f9174492b69f7cebbcf4c338bcc86",
+  "upstream_commit": "ba9d8460a56889180b999c52131c48fb5b4ab77a",
+  "scope": "Partial audited source export; NOT complete Corresponding Source for the hybrid APK.",
+  "selection_policy": "Explicit A/B allowlist; C/D and conservative generated-data holds omitted.",
+  "copied_files": [
+    {
+      "path": "src/bridge/kr/co/iefriends/pcsx2/NativeApp.java",
+      "original_path": "aether-armsx2-port/src/kr/co/iefriends/pcsx2/NativeApp.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "cc3eb1634f016d655d5ce292517b10e0eac6cbc9b2087e7e083f2644af058495",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/ActivityLocale.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ActivityLocale.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "802b986ddd0e15b6df40ce92faded8839e3c811a9a9a85169abb36b5054e2f17",
+      "source_last_commit": "7fef603ec850db08270d1c343bf61ec667a28f10",
+      "source_last_change_date": "2026-10-30T02:11:29+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/AnalogGesture.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/AnalogGesture.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "44c152cc305ff9dfdc260e58b24ee4db0cc22008b28b6131a3ce5527eb179ea9",
+      "source_last_commit": "6cf440ce84b81556ce42a664e3a0e2c4d259f4b6",
+      "source_last_change_date": "2026-10-30T00:58:45+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/AnalogTouch.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/AnalogTouch.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "52afd5bc62644511f1598314e59780ca0fcc4cc2eac34598140710d75466b314",
+      "source_last_commit": "6cf440ce84b81556ce42a664e3a0e2c4d259f4b6",
+      "source_last_change_date": "2026-10-30T00:58:45+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/AppVersionContent.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/AppVersionContent.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "558b6d7e1b3297c6c514786b00ec159a41df1b3628ae26969a5f9c9f84da7418",
+      "source_last_commit": "c00dca9d8565f38ae8aa049e3710150d007fea48",
+      "source_last_change_date": "2026-10-30T15:15:32+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/AudioFocusPolicy.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/AudioFocusPolicy.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "f704ae8643585b6fdf99b13a8c8c63f0266ebd8e093344c21d9ccf25234f5200",
+      "source_last_commit": "303bfd42c0e21a858f019723251e4e18a45801ee",
+      "source_last_change_date": "2026-10-30T12:34:04+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/Bridge.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/Bridge.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "2d6251ec0339f4b299591167ac18fe18a0aa70ff7e454bb8ddee4452075aa4ca",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/ButtonTouch.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ButtonTouch.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "fadf199426854f9b66c883abca8c06ac52f75ecbd4638b545547d06e4d90c601",
+      "source_last_commit": "372fc9d578bb575f139b199225c52cece9a41860",
+      "source_last_change_date": "2026-10-30T00:15:49+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/ControllerBindings.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ControllerBindings.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "51b952e1ab0294fa23dd8f924439ad8b485804a6625c239443375b66dad4d825",
+      "source_last_commit": "7fef603ec850db08270d1c343bf61ec667a28f10",
+      "source_last_change_date": "2026-10-30T02:11:29+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/ControllerDevices.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ControllerDevices.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "d354043ec1560136be94bfc0bc712be4681c2d0f347af847f672aac06cea503f",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/ControllerDialogs.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ControllerDialogs.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "4917b761b88d9f41ffc72de469fa4d02b13cd486c2cb73bc00b49a13b3d29354",
+      "source_last_commit": "9c8ece6dcdfa0e90e507306e60cafadcdc37ffa3",
+      "source_last_change_date": "2026-10-30T02:51:04+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/ControllerLayoutAccess.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ControllerLayoutAccess.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "d7425871e7379fc7e7913f53fa06df316c464a5fce520e5c0f64204163970cbb",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/ControllerLayoutActivity.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ControllerLayoutActivity.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "7d3f8e4add5b94f60893255c4fcab7907a9c06ce00c201c05b169f61d29777b1",
+      "source_last_commit": "b5225d39a575eee51f0c1f89054831047a6cd66f",
+      "source_last_change_date": "2026-10-30T02:14:42+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/ControllerPreferences.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ControllerPreferences.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "439f0ce5ec5f12b45d4f30a6e079dcea861897795c7ae129021094876f40acc6",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/ControllerProperties.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ControllerProperties.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "6d70d79f649033c76ed111daf43933c19f905d37ce86f6019512ca18365b86ef",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/ControllerRumble.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ControllerRumble.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "b60995eeeab0e5787e9e0bd40aa22930d079eac9e28b085a86632fb9951c4774",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/ControllerRuntime.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ControllerRuntime.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "7814f5dc7d3a554dca96bf1bd45a81cf21930f1a8dd6f3d75e73bb5d390958be",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/ControllerSettings.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ControllerSettings.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "9d9ea5dd42d2051ccab97031044c6ae2f142e7a110706af148c07bb3787dbeca",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/xyz/aethersx2/android/CoreProbeActivity.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/CoreProbeActivity.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "8130776e19dc7907c638e673de00ac496a4a1306435c9470010a80c14da9b5f4",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false,
+      "layout_note": "Newly authored diagnostic Activity retains its declared xyz.aethersx2.android namespace; it is not a decoded legacy class."
+    },
+    {
+      "path": "src/covers/org/local/aetherarms/CoverManager.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/CoverManager.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "52af37fa303204f51607783b81cb0082db38210a0b68940759ae80ba8c595286",
+      "source_last_commit": "5072a1e836c4098a6aada692f0a82f0400cfebdc",
+      "source_last_change_date": "2026-10-30T00:28:13+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/covers/org/local/aetherarms/CoverPolicy.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/CoverPolicy.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "d3e6b48cc1a3687dbaf89555a4790af16d352e9dbd11f3d475eb9a919d8c5b9d",
+      "source_last_commit": "5072a1e836c4098a6aada692f0a82f0400cfebdc",
+      "source_last_change_date": "2026-10-30T00:28:13+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/DpadMask.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/DpadMask.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "95ba3483a58cfbbe12df587625e2477d79e51e8d1046e5338cb1ad93e7950994",
+      "source_last_commit": "372fc9d578bb575f139b199225c52cece9a41860",
+      "source_last_change_date": "2026-10-30T00:15:49+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/DpadTouch.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/DpadTouch.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "41f47d41337647b691fc0d7637e9d3c4c500419a2409b3f37d9f864ccaf561a2",
+      "source_last_commit": "372fc9d578bb575f139b199225c52cece9a41860",
+      "source_last_change_date": "2026-10-30T00:15:49+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/EmulationFullscreen.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/EmulationFullscreen.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "aef3ab851f5e5cea13c84a79ad833e19c30f6d476d0894617c675ec3433d62e4",
+      "source_last_commit": "56b821821f1a60470c2ba1c349bcc5f149b7b09c",
+      "source_last_change_date": "2026-10-29T22:19:56+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/EmulationLifecycleCallbacks.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/EmulationLifecycleCallbacks.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "855eb7eee15b8b3f4fbc2d0dbd74eec6b45ed94547ec30452421be455c3a3a70",
+      "source_last_commit": "de0644283e44b17664d0a444ed28061c0b20fbe5",
+      "source_last_change_date": "2026-10-30T12:24:39+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/GameAudioFocus.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/GameAudioFocus.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "f9cd2e5e1585ac01b8611e19fbe840673206475fcba1de2eee47456c8522144b",
+      "source_last_commit": "303bfd42c0e21a858f019723251e4e18a45801ee",
+      "source_last_change_date": "2026-10-30T12:34:04+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/GraphicsConfig.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/GraphicsConfig.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "83b2a0328c7e528f9ad55a19f63d1e8ea3eaa34b5483b496422c4c7f7bb6ae46",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/GraphicsSettingsModel.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/GraphicsSettingsModel.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "219b6cd2f4bfa74df18ad3c97a1b6b9774c4ba05bc7087546b89668ec45c5f1e",
+      "source_last_commit": "56b821821f1a60470c2ba1c349bcc5f149b7b09c",
+      "source_last_change_date": "2026-10-29T22:19:56+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/MacroController.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/MacroController.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "195a4751e80fb9e0fb9284bdd90e77f520eb45a26ff6bf2a4c60ed935772a040",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/MotorMixer.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/MotorMixer.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "e2d7acdfcba1e906e35a0e47239d126008da858f6b9e0e7e34160a5a9573a978",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/NoticeNavigation.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/NoticeNavigation.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "151b606a2f00b6b5539143bbc8bea5ddbdee658af2fc9bf8e2b2826acdec14d8",
+      "source_last_commit": "c00dca9d8565f38ae8aa049e3710150d007fea48",
+      "source_last_change_date": "2026-10-30T15:15:32+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/PadMixer.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/PadMixer.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "531af767c0f8f8ab04c638e892c211795c599cf34cbb44c2f576eb1cb8380f95",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/PauseAudioController.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/PauseAudioController.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "48756ca653eefb179b5895d77a7a16d31b48012248561918bab2d87af7cbfaf2",
+      "source_last_commit": "372fc9d578bb575f139b199225c52cece9a41860",
+      "source_last_change_date": "2026-10-30T00:15:49+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/PauseMenuHeader.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/PauseMenuHeader.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "47a1838747553b78f4e083fb1f0be521b6dd9a5d45d1dae489947851204dbed3",
+      "source_last_commit": "6b28187c974065317752a2a70f88c3c1a9ba8841",
+      "source_last_change_date": "2026-10-30T14:19:27+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/org/local/aetherarms/ProfileMigrator.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/ProfileMigrator.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "42121e08edb57ce1436cf4d557a008beaa6d5edc05c7e5538afcc57f3c6f81fd",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/org/local/aetherarms/RemotePadController.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/RemotePadController.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "7c6ae1dd36a19ee7e5f46dde9d87a86cfae9909b9bfe397ed56d0b6de5d44232",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/org/local/aetherarms/RemotePlayMenu.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/RemotePlayMenu.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "6e94100a694b06344f5a1a22a83861f255805b174f083b0b3bcb9f893ec94b0d",
+      "source_last_commit": "f0276fa2804f9174492b69f7cebbcf4c338bcc86",
+      "source_last_change_date": "2026-10-30T17:03:40+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/org/local/aetherarms/RemotePreferenceDialogs.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/RemotePreferenceDialogs.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "12f7f35064493d0c2b742be0e1ab7a19b2c4aae8e3ccf456c955323ca198c7e4",
+      "source_last_commit": "6b28187c974065317752a2a70f88c3c1a9ba8841",
+      "source_last_change_date": "2026-10-30T14:19:27+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/org/local/aetherarms/RemotePreferenceTheme.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/RemotePreferenceTheme.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "91489bf28f7e7c842f728c55281b88a5e209e8ea87d9543a43c1e9c824a463cb",
+      "source_last_commit": "8d5fb74cb5c14358b82ff18feb3721c52575bd9d",
+      "source_last_change_date": "2026-10-30T14:37:38+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/RumbleController.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/RumbleController.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "8c37a44ec1b3792c0081b4ebe6bed37f9f0952550a07472c4e068f33d0870e56",
+      "source_last_commit": "039d28030e68cb25dcc9b4a96e4390fd6051ad2b",
+      "source_last_change_date": "2026-10-30T00:49:42+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/RumbleSettings.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/RumbleSettings.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "6486c26d82d76215abd934f7628446985b58ca3cd18ae5a03dcdab1700722b23",
+      "source_last_commit": "039d28030e68cb25dcc9b4a96e4390fd6051ad2b",
+      "source_last_change_date": "2026-10-30T00:49:42+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/skins/org/local/aetherarms/SkinArchive.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/SkinArchive.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "52eb7d3fdd93e05a203eb0662bb85d8b089aba16c12caa107bee9bfc4bf31f65",
+      "source_last_commit": "021ebff9192dfc298f63f16b0b73bb7baef292a9",
+      "source_last_change_date": "2026-10-29T23:37:32+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/skins/org/local/aetherarms/SkinImportActivity.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/SkinImportActivity.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "83969a5b248bf934b2294734ccc53a898cc282c8a123aa7ae764eb99705bd452",
+      "source_last_commit": "7fef603ec850db08270d1c343bf61ec667a28f10",
+      "source_last_change_date": "2026-10-30T02:11:29+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/skins/org/local/aetherarms/SkinPolicy.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/SkinPolicy.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "e21f4b99b6eeedc3d58b1da2602f5dc367814e6af0f73822b38b2fc06406a238",
+      "source_last_commit": "021ebff9192dfc298f63f16b0b73bb7baef292a9",
+      "source_last_change_date": "2026-10-29T23:37:32+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/skins/org/local/aetherarms/SkinPreference.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/SkinPreference.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "54ec0d95201be5d564c1f61c1d9c0b1585f47ff4b3546aecded781ae3daa0c14",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/skins/org/local/aetherarms/SkinRenderer.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/SkinRenderer.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "50216e2aed6bf1a709e33c6e7880d82c622238f588fc6d5c2491d9d982b3c02b",
+      "source_last_commit": "6cf440ce84b81556ce42a664e3a0e2c4d259f4b6",
+      "source_last_change_date": "2026-10-30T00:58:45+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/skins/org/local/aetherarms/SkinRepository.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/SkinRepository.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "8310c3e2c6fcddc79e61c4686263a34e7aa321643bb825bb0a8c57c1495bfca4",
+      "source_last_commit": "021ebff9192dfc298f63f16b0b73bb7baef292a9",
+      "source_last_change_date": "2026-10-29T23:37:32+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/skins/org/local/aetherarms/SkinStore.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/SkinStore.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "fba7e5b5a6029706202a7bc84204e7c72296f9b3ecb55814fd4120f159b30af3",
+      "source_last_commit": "c3b65fe09821873c2220aac6c83b558debce043f",
+      "source_last_change_date": "2026-10-30T02:02:48+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/skins/org/local/aetherarms/SkinText.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/SkinText.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "3139fd50e399e76dc5445e544a34f82c02bcd72c20ac860b9b4b703631949326",
+      "source_last_commit": "021ebff9192dfc298f63f16b0b73bb7baef292a9",
+      "source_last_change_date": "2026-10-29T23:37:32+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/skins/org/local/aetherarms/SkinUi.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/SkinUi.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "a9f8ffd5eb4a44e0a000209736ae6d4061d557c868f7f51beb12001d57167d4f",
+      "source_last_commit": "372fc9d578bb575f139b199225c52cece9a41860",
+      "source_last_change_date": "2026-10-30T00:15:49+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/controller/org/local/aetherarms/TouchFeedback.java",
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/TouchFeedback.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
+      "sha256": "c1ce92db43fd4db9be3a849a54a422cb2602e4117445aac49427a6201e3d0bec",
+      "source_last_commit": "372fc9d578bb575f139b199225c52cece9a41860",
+      "source_last_change_date": "2026-10-30T00:15:49+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/com/armsx2/i18n/I18n.kt",
+      "original_path": "aether-armsx2-port/remote-src/com/armsx2/i18n/I18n.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; hybrid Remote Play integration; SPDX retained.",
+      "sha256": "b58af99cd6cc8812f841efe0b446fb1c1d5533ab08fad20fd4839e7ffdc40170",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/com/armsx2/remoteplay/RemotePadView.kt",
+      "original_path": "aether-armsx2-port/remote-src/com/armsx2/remoteplay/RemotePadView.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; hybrid Remote Play integration; SPDX retained.",
+      "sha256": "f9ea7fa0878c53dddc80408a8c61741a80ddc237f1569f9a15a7bfacab80e8be",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/com/armsx2/remoteplay/RemotePages.kt",
+      "original_path": "aether-armsx2-port/remote-src/com/armsx2/remoteplay/RemotePages.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; hybrid Remote Play integration; SPDX retained.",
+      "sha256": "67d392daac5ac8d79c4145594a6b108a742a349c34151d8f0286ab7e1227b037",
+      "source_last_commit": "6b28187c974065317752a2a70f88c3c1a9ba8841",
+      "source_last_change_date": "2026-10-30T14:19:27+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/com/armsx2/remoteplay/RemotePlayPanel.kt",
+      "original_path": "aether-armsx2-port/remote-src/com/armsx2/remoteplay/RemotePlayPanel.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; hybrid Remote Play integration; SPDX retained.",
+      "sha256": "c58e2c53724c4b3b6073819742dffbfd91fc51c7831cf045694307ab5d6c5356",
+      "source_last_commit": "8d5fb74cb5c14358b82ff18feb3721c52575bd9d",
+      "source_last_change_date": "2026-10-30T14:37:38+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/com/armsx2/remoteplay/RemoteRuntime.kt",
+      "original_path": "aether-armsx2-port/remote-src/com/armsx2/remoteplay/RemoteRuntime.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; hybrid Remote Play integration; SPDX retained.",
+      "sha256": "f4ebb54f49a456e76e2ad4dbbfc04f382cfb740b2e545e09eb695776cf257396",
+      "source_last_commit": "2afb39b46984bcb749568d158b035734d90ba3c7",
+      "source_last_change_date": "2026-10-30T13:27:49+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/com/armsx2/remoteplay/RemoteTheme.kt",
+      "original_path": "aether-armsx2-port/remote-src/com/armsx2/remoteplay/RemoteTheme.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; hybrid Remote Play integration; SPDX retained.",
+      "sha256": "0870ff57faf844be9a52343072228ab281dc2c0e97e20e42aef6d44d2c2584ff",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/com/armsx2/remoteplay/RemoteUi.kt",
+      "original_path": "aether-armsx2-port/remote-src/com/armsx2/remoteplay/RemoteUi.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; hybrid Remote Play integration; SPDX retained.",
+      "sha256": "dabf34268554eb532e9b37a4c0f69827fb27bd587e28bae8fe14230b9dc8dcbb",
+      "source_last_commit": "6b28187c974065317752a2a70f88c3c1a9ba8841",
+      "source_last_change_date": "2026-10-30T14:19:27+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/remoteplay/com/armsx2/remoteplay/RemoteViewerActivity.kt",
+      "original_path": "aether-armsx2-port/remote-src/com/armsx2/remoteplay/RemoteViewerActivity.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; hybrid Remote Play integration; SPDX retained.",
+      "sha256": "92cd9579e742d775a6975652382fbf716c39cda267913600cb80df0ed0031735",
+      "source_last_commit": "2afb39b46984bcb749568d158b035734d90ba3c7",
+      "source_last_change_date": "2026-10-30T13:27:49+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "src/bridge/diagnostics/legacy_trace.cpp",
+      "original_path": "aether-armsx2-port/diagnostics/legacy_trace.cpp",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "ADAPTER-LICENSE.txt explicitly covers diagnostics; no legacy native binary included.",
+      "sha256": "a36fb16e3d0dee05005f368bad33c3e42def25d2c33cd975635540c3d263766a",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "tests/AudioFocusChecks.java",
+      "original_path": "aether-armsx2-port/tests/AudioFocusChecks.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; original project test source unchanged; some suites are reference-only.",
+      "sha256": "a767e674ff8710fe4baae93a39986b4bb6d2379e38becd28e79f0a7aba110ff2",
+      "source_last_commit": "303bfd42c0e21a858f019723251e4e18a45801ee",
+      "source_last_change_date": "2026-10-30T12:34:04+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "tests/reference/ControllerChecks.java",
+      "original_path": "aether-armsx2-port/tests/ControllerChecks.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; original project test source unchanged; some suites are reference-only.",
+      "sha256": "b1836723e022597938aa680c74b9addbd63b55d36f808c13057d2a0780ec2430",
+      "source_last_commit": "039d28030e68cb25dcc9b4a96e4390fd6051ad2b",
+      "source_last_change_date": "2026-10-30T00:49:42+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "tests/reference/ControllerDialogChecks.java",
+      "original_path": "aether-armsx2-port/tests/ControllerDialogChecks.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; original project test source unchanged; some suites are reference-only.",
+      "sha256": "264f5db4cbef8657223297bbbf5f2a60d6a1604134e054ceff41a52fdd1d989f",
+      "source_last_commit": "9c8ece6dcdfa0e90e507306e60cafadcdc37ffa3",
+      "source_last_change_date": "2026-10-30T02:51:04+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "tests/reference/DpadChecks.java",
+      "original_path": "aether-armsx2-port/tests/DpadChecks.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; original project test source unchanged; some suites are reference-only.",
+      "sha256": "57a0d8ca67aca8e32f7e89b91a3031d952e727f030c969be008bb731e86d54c2",
+      "source_last_commit": "372fc9d578bb575f139b199225c52cece9a41860",
+      "source_last_change_date": "2026-10-30T00:15:49+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "tests/reference/FullControllerChecks.java",
+      "original_path": "aether-armsx2-port/tests/FullControllerChecks.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; original project test source unchanged; some suites are reference-only.",
+      "sha256": "1251dd5a97b870d50b2a71b2c96977f6dd11939d9f1fc382a7ecb40eefc07d7e",
+      "source_last_commit": "7fef603ec850db08270d1c343bf61ec667a28f10",
+      "source_last_change_date": "2026-10-30T02:11:29+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "tests/reference/ModelChecks.java",
+      "original_path": "aether-armsx2-port/tests/ModelChecks.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; original project test source unchanged; some suites are reference-only.",
+      "sha256": "a1f4c38b6d38aae14c8e3a49e8ded433bbf1ea045f7fc086a866f06765231404",
+      "source_last_commit": "5072a1e836c4098a6aada692f0a82f0400cfebdc",
+      "source_last_change_date": "2026-10-30T00:28:13+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "tests/RemotePadChecks.java",
+      "original_path": "aether-armsx2-port/tests/RemotePadChecks.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; original project test source unchanged; some suites are reference-only.",
+      "sha256": "f83cb0068bf377bb1a56bf4f0c99632f6702b11d29c18b4becb7f80275c38d8c",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "tests/reference/RemotePlayChecks.java",
+      "original_path": "aether-armsx2-port/tests/RemotePlayChecks.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; original project test source unchanged; some suites are reference-only.",
+      "sha256": "ce87e0613d707d7ec34c919f07683413c68e0477c6dc291f2f6cc56a33181ffa",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "tests/SkinChecks.java",
+      "original_path": "aether-armsx2-port/tests/SkinChecks.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; original project test source unchanged; some suites are reference-only.",
+      "sha256": "c3c7dad63ba460ee65d255a1c084ec4040a0843035c16ed1cc60dc4526276390",
+      "source_last_commit": "021ebff9192dfc298f63f16b0b73bb7baef292a9",
+      "source_last_change_date": "2026-10-29T23:37:32+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "tests/reference/TouchChecks.java",
+      "original_path": "aether-armsx2-port/tests/TouchChecks.java",
+      "audit_category": "B",
+      "license": "GPL-3.0-or-later",
+      "basis": "Original audit B; original project test source unchanged; some suites are reference-only.",
+      "sha256": "65e42e94cb3f2c5fc2775507230dbc7bc0571e042f8f69e6d4eeee2fff90fd8d",
+      "source_last_commit": "6cf440ce84b81556ce42a664e3a0e2c4d259f4b6",
+      "source_last_change_date": "2026-10-30T00:58:45+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/kr/co/iefriends/pcsx2/ContentChdFiles.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/kr/co/iefriends/pcsx2/ContentChdFiles.java",
+      "audit_category": "B",
+      "license": "GPL-3.0 (upstream scope; retain individual headers)",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "8782bcf14373688e42de53eeb22c52917824ffdec649396c053f3512b566aca0",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/kr/co/iefriends/pcsx2/HttpClient.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/kr/co/iefriends/pcsx2/HttpClient.java",
+      "audit_category": "B",
+      "license": "GPL-3.0 (upstream scope; retain individual headers)",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "2dcbdbeddb79d2ce8b1cb71945d944ebdc2064c1588a63649641415cb65d2c44",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/org/libsdl/app/HIDDevice.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/org/libsdl/app/HIDDevice.java",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "afdeaf583f051583eff5cc9dcbfb983e3e8923e66d1130ff3e30c21afc8f87f1",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/org/libsdl/app/HIDDeviceBLESteamController.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/org/libsdl/app/HIDDeviceBLESteamController.java",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "7ebeda5ab9605d890325f0e1aff011cc20ebe32d19aaa98eda0c800ebde5a96c",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/org/libsdl/app/HIDDeviceManager.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/org/libsdl/app/HIDDeviceManager.java",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "208d7ade6fc6cc0792636488c737487030d527852802a569de96b46cd05d20dc",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/org/libsdl/app/HIDDeviceUSB.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/org/libsdl/app/HIDDeviceUSB.java",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "45a1ecd525bd700adbfe529737fe95cce4b449730fc80fcee7bfebe56200550c",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/org/libsdl/app/SDL.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/org/libsdl/app/SDL.java",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "49d13bd76b65b40bc13b8f4ff1333ecf9fc5473a57bb2d216e2a60dc2e5973a4",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/org/libsdl/app/SDLActivity.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/org/libsdl/app/SDLActivity.java",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "a0c4e37753c63206a68fb831db719ee6e9970ecf940557589413545cb32233b8",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/org/libsdl/app/SDLAudioManager.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/org/libsdl/app/SDLAudioManager.java",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "129990250d389bc6550c1a27a81ee9a4cc32a4d6e9080f2fe466480988f214eb",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/org/libsdl/app/SDLControllerManager.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/org/libsdl/app/SDLControllerManager.java",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "b874063ff6807c0ed453c6281cddb6b22347d6625ecc199cc1d6a48d118aa1b4",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/org/libsdl/app/SDLDummyEdit.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/org/libsdl/app/SDLDummyEdit.java",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "fb777fa4b4cce4d328229014acf156c2c2f47445dacccd5f74f876a64cdf502b",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/org/libsdl/app/SDLInputConnection.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/org/libsdl/app/SDLInputConnection.java",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "7079f65944ce0f6e8e3ca0293fc79c1e4e050f3b4290c39990723e3a0e40bc9b",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/upstream-java/org/libsdl/app/SDLSurface.java",
+      "original_path": "aether-armsx2-port/vendor/upstream-java/org/libsdl/app/SDLSurface.java",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Original audit B; verified hash and upstream provenance; unmodified source snapshot.",
+      "sha256": "01bc47885f4ef7ea7f53636e6be9300306770d879605fb140c30bed030dbd5bb",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/provenance.json",
+      "original_path": "aether-armsx2-port/vendor/provenance.json",
+      "audit_category": "A",
+      "license": "Provenance metadata",
+      "basis": "Original audit A; source provenance metadata, not credentials.",
+      "sha256": "330bec3fb63eeaef448ac6d31cecf82df248f19644a2f05e0122051463637b3a",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayFrames.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayFrames.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "fad0da4dce03adfbbdbaec54f2dc483ab0ef65ddd743723e418a9fbbbcbe161b",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayHost.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayHost.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "e6229211a1f41d9627c9163f8d26a7b196e66df2a6a24098e81c792232062ce1",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayCore.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayCore.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "f83f1bf7a075d746da9e484b27f1e62bb1c627042b15d68fb791b402dc7f5e7f",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayLobby.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayLobby.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "c46d4b92fdb07f8ff52881a82f84ae26f96fa69dbc0912ddd0ad63e479a0b0cd",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayOpus.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayOpus.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "35fdd2896bca59c6b7d41e8213aa8c2cb6e6d658cc824b59550dc9b17af40339",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayProtocol.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayProtocol.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "4ce58215eddceea328a99ace8cb4e452e59b02573ad8bd98682ca5e21116134e",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayRtc.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayRtc.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "0e7f9447cb179d18453317992e16294c7e32b1d0b0023ef12b792a72de1782a4",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlaySignaling.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlaySignaling.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "0da2cdfe475575690769d42685897a441a59a86af7bb8453fa4979bfc0faf587",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayStats.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayStats.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "e004d2c3b31efe08cff3fa24ba16cf775f80465034192e5b1a687c9efb81a834",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayTouchPad.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayTouchPad.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "26c49e75c52f520c5b9008c02c14a300d45de5bdcd489ac473de804d9f0025ad",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayUpnp.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayUpnp.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "f8e6f09cfc8762e83eb7811a845e53d1f508c1746ee53753104f714f9b234cf3",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayWifi.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayWifi.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "32567d2951b1ee521e79880a85733fd90721e09648ecb6c70cfd4b7a664ef321",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/RemotePlayViewerActivity.kt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/RemotePlayViewerActivity.kt",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "c4213706e88b694397f2ad9fb659c575551dd07afa20630bb1542a608cf63bc0",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/ArmsxH264Encoder.java",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/ArmsxH264Encoder.java",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "96848863f6ee72fb7b6a244e5756570f06602a4b1e2ca40f52372594ee49ace6",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/ArmsxNV12Buffer.java",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/ArmsxNV12Buffer.java",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "34a06e091575c7945afa860194b4cc096339c1559ef6fb4bdc06fe644ef883ee",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/ArmsxSurfaceDecoder.java",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/ArmsxSurfaceDecoder.java",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "6348a5870b6ff1ce169209fc5b23143b12e21f375b634d2e4a87f1dab0d8ac24",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/ArmsxVideoDecoderFactory.java",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/ArmsxVideoDecoderFactory.java",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "bf45b4c72642630d710f80ea3711f3aba02e56d4951bf5552f00d261cd59a35a",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/ArmsxVideoEncoderFactory.java",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/ArmsxVideoEncoderFactory.java",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "13d1e9b9e7f5b24bef31b78f9104796a01d7fe687a48f93011bdc400820ba474",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/ArmsxVideoOutput.java",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/ArmsxVideoOutput.java",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "534cdeb0e3eebb50660d87b29bf3e3fd1423d2cf54240a841ab6a5ea47fd368f",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/en.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/en.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "9a6d7f165ad079350e405a2a43d320849295ca5b1602443220a0751be1abd125",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/ar.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/ar.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "c6fedf3a46f7897e22351e36395bb7c7fd24fbc4ed079dc196e08f10368cbfbb",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/de.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/de.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "35087a3b74309e81fe4a1dd9071ed0aa0d3ac3d634c629075556e7b12852674b",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/es.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/es.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "63f71cda421751127d8c76f128a325aba6485be8675066b606f699181e3611be",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/fa.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/fa.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "f343c08ccdb1e3eb09b324696486696855c3101d99df6fa93a8774cc7c7e33f2",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/fr.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/fr.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "b63d3b2d825e043a566fdf4978ba3551cb2a4a811efd4ada130b887556512ee0",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/id.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/id.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "e29a119c05115c3cbdfa8df3bf74f3c610707c5d57d7c14b5e624fcb82d38873",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/it.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/it.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "1268bdd335df5c227582d2068934a158997e00730adfe47b8c28e82d5e7b3309",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/ja.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/ja.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "11031cd5af45523533480a5ebd1f45202a5a49b1d9597c744ff548904bf968a8",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/ko.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/ko.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "e4b9bb545e859f6ec339940248c55ba90ca06becddee00031c8889e0326c567c",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/ku.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/ku.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "ab3ff59849e5e93d776f21b37d4455e54295565d3f580131a5b78da4b5bdbff2",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/pl.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/pl.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "9f39f9310f309554c7873df83b4f0954f5fe44323c800a09c7a1586212183663",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/pt-BR.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/pt-BR.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "4998edd1515911b23055b548e4ca1b0def13389f2c0361305d63ae34a28b3ef6",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/ru.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/ru.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "e094472dfdea6284e8360e395eaaca6d9ae0324b9f298faf5feb5a5b6f779a6d",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/th.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/th.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "d2a4d6ea5428c06e1cccf0203aab5e35409cac7f562c81edf5a2d94b955e5f8b",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/tr.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/tr.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "e3394573838c1601a855acaa6469fc553576e45ba6e12332afaebfe2b01d9d08",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/uk.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/uk.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "846e22a36124c33b3e762f00dfe522903131c582b9ee94cfdce318388eb3dbd3",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/vi.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/vi.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "0c093ee5f55df82b3c9ee4d081b147e2001a637387b7e1c5f218f65a9603cc74",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/zh-CN.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/zh-CN.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "c3ac517daac5ab5b9e4406798f7e8e0d5f91450544b9f1bddd13bf8f176671e8",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/i18n/zh-TW.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/i18n/zh-TW.json",
+      "audit_category": "B",
+      "license": "GPL-3.0 (per-file headers; most source is GPL-3.0-or-later)",
+      "basis": "Original audit B; verified ARMSX2 upstream source/translation snapshot; unchanged.",
+      "sha256": "061dcc99682af72b66463595414c056c75022567aec6849b24df333207e90e02",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "vendor/remoteplay/provenance.json",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/provenance.json",
+      "audit_category": "A",
+      "license": "Provenance metadata",
+      "basis": "Original audit A; full historical dependency lock, including intentionally absent artifacts.",
+      "sha256": "5b015c15bb5d2e11040cb3d680f6f3a871de0c427da7d4c425bebd7b59c4269d",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "LICENSE",
+      "original_path": "aether-armsx2-port/COPYING.GPLv3",
+      "audit_category": "B",
+      "license": "GPL-3.0 license text",
+      "basis": "Verbatim original audited license/notice; no third-party notice removed or replaced.",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "LICENSES/ADAPTER-LICENSE.txt",
+      "original_path": "aether-armsx2-port/ADAPTER-LICENSE.txt",
+      "audit_category": "A",
+      "license": "Adapter licensing declaration",
+      "basis": "Verbatim original audited license/notice; no third-party notice removed or replaced.",
+      "sha256": "a65cfd0473d505c62415e38aaf31b55e69309794f1a3a8db18b75577ba78cfb9",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "LICENSES/ARMSX2-COPYING.GPLv3",
+      "original_path": "aether-armsx2-port/vendor/LICENSES/ARMSX2-COPYING.GPLv3",
+      "audit_category": "B",
+      "license": "GPL-3.0 license text",
+      "basis": "Verbatim original audited license/notice; no third-party notice removed or replaced.",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "LICENSES/SDL-LICENSE.txt",
+      "original_path": "aether-armsx2-port/vendor/LICENSES/SDL-LICENSE.txt",
+      "audit_category": "B",
+      "license": "Zlib",
+      "basis": "Verbatim original audited license/notice; no third-party notice removed or replaced.",
+      "sha256": "1c040b8271b37e5076359f8fd54240e371114112924d2df81ef87c7d6a1dfdfd",
+      "source_last_commit": "b53f06c56ab446b978a23d0e812f04e664887bc0",
+      "source_last_change_date": "2026-10-29T20:49:22+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "LICENSES/LICENSE-stream.txt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/LICENSE-stream.txt",
+      "audit_category": "B",
+      "license": "Apache-2.0",
+      "basis": "Verbatim original audited license/notice; no third-party notice removed or replaced.",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "LICENSES/LICENSE-webrtc.txt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/LICENSE-webrtc.txt",
+      "audit_category": "B",
+      "license": "BSD-3-Clause",
+      "basis": "Verbatim original audited license/notice; no third-party notice removed or replaced.",
+      "sha256": "ab00a482b6a3902e40211b43c5d0441962ea99b6cc7c25c0f243fa270b78d482",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    },
+    {
+      "path": "LICENSES/LICENSE-kotlin.txt",
+      "original_path": "aether-armsx2-port/vendor/remoteplay/LICENSE-kotlin.txt",
+      "audit_category": "B",
+      "license": "Apache-2.0",
+      "basis": "Verbatim original audited license/notice; no third-party notice removed or replaced.",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source_last_commit": "e2ba94e29363136d712da3154581943fd3e8efa9",
+      "source_last_change_date": "2026-10-30T13:17:20+08:00",
+      "content_modified_for_export": false
+    }
+  ],
+  "additional_source_holds": {
+    "DpadGeometry.java": "Category C: contains geometry copied from legacy Aether artwork.",
+    "GraphicsSchema.java": "Additional conservative hold: generated from category-C config/graphics-mapping.json.",
+    "PadRoutes.java": "Additional conservative hold: generated from category-C config/controller-pad-routes.json."
+  },
+  "vendor_locks": "Original provenance files are preserved. Entries for excluded binaries/licenses may refer to files intentionally absent or relocated to LICENSES; copied_files is the export inventory.",
+  "excluded_tracked_files": [
+    {
+      "original_path": "aether-armsx2-port/.gitignore",
+      "original_audit_category": "A",
+      "reason": "Optional internal document, metadata, styling or provenance not needed by this partial source export."
+    },
+    {
+      "original_path": "aether-armsx2-port/AGENTS.md",
+      "original_audit_category": "A",
+      "reason": "Optional internal document, metadata, styling or provenance not needed by this partial source export."
+    },
+    {
+      "original_path": "aether-armsx2-port/PORT-STATUS.txt",
+      "original_audit_category": "A",
+      "reason": "Optional internal document, metadata, styling or provenance not needed by this partial source export."
+    },
+    {
+      "original_path": "aether-armsx2-port/PROJECT.txt",
+      "original_audit_category": "A",
+      "reason": "Optional internal document, metadata, styling or provenance not needed by this partial source export."
+    },
+    {
+      "original_path": "aether-armsx2-port/RELEASE-STATUS.txt",
+      "original_audit_category": "A",
+      "reason": "Optional internal document, metadata, styling or provenance not needed by this partial source export."
+    },
+    {
+      "original_path": "aether-armsx2-port/analog_strings.py",
+      "original_audit_category": "B",
+      "reason": "Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline."
+    },
+    {
+      "original_path": "aether-armsx2-port/app-assets/about/profile.jpg",
+      "original_audit_category": "C",
+      "reason": "No verified artist/redistribution grant."
+    },
+    {
+      "original_path": "aether-armsx2-port/app-assets/about/provenance.json",
+      "original_audit_category": "A",
+      "reason": "Optional internal document, metadata, styling or provenance not needed by this partial source export."
+    },
+    {
+      "original_path": "aether-armsx2-port/app-assets/notices/style.css",
+      "original_audit_category": "A",
+      "reason": "Optional internal document, metadata, styling or provenance not needed by this partial source export."
+    },
+    {
+      "original_path": "aether-armsx2-port/backup-project.py",
+      "original_audit_category": "B",
+      "reason": "Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline."
+    },
+    {
+      "original_path": "aether-armsx2-port/build.py",
+      "original_audit_category": "C",
+      "reason": "Unresolved legacy native/Smali integration and signing-password arguments; not copied."
+    },
+    {
+      "original_path": "aether-armsx2-port/check_alignment.py",
+      "original_audit_category": "B",
+      "reason": "Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline."
+    },
+    {
+      "original_path": "aether-armsx2-port/compile-stubs/androidx/preference/Preference.java",
+      "original_audit_category": "C",
+      "reason": "ABI reconstruction or test-stub grant not sufficiently established."
+    },
+    {
+      "original_path": "aether-armsx2-port/config/analog-translations.json",
+      "original_audit_category": "C",
+      "reason": "Mapping/translation provenance not resolved per entry."
+    },
+    {
+      "original_path": "aether-armsx2-port/config/app.json",
+      "original_audit_category": "A",
+      "reason": "Optional internal document, metadata, styling or provenance not needed by this partial source export."
+    },
+    {
+      "original_path": "aether-armsx2-port/config/controller-audit.json",
+      "original_audit_category": "C",
+      "reason": "Mapping/translation provenance not resolved per entry."
+    },
+    {
+      "original_path": "aether-armsx2-port/config/controller-pad-routes.json",
+      "original_audit_category": "C",
+      "reason": "Mapping/translation provenance not resolved per entry."
+    },
+    {
+      "original_path": "aether-armsx2-port/config/controller-properties-translations.json",
+      "original_audit_category": "C",
+      "reason": "Mapping/translation provenance not resolved per entry."
+    },
+    {
+      "original_path": "aether-armsx2-port/config/donor.lock.json",
+      "original_audit_category": "A",
+      "reason": "Optional internal document, metadata, styling or provenance not needed by this partial source export."
+    },
+    {
+      "original_path": "aether-armsx2-port/config/github-release.json",
+      "original_audit_category": "A",
+      "reason": "Optional internal document, metadata, styling or provenance not needed by this partial source export."
+    },
+    {
+      "original_path": "aether-armsx2-port/config/graphics-mapping.json",
+      "original_audit_category": "C",
+      "reason": "Mapping/translation provenance not resolved per entry."
+    },
+    {
+      "original_path": "aether-armsx2-port/config/remote-play-ui-translations.json",
+      "original_audit_category": "C",
+      "reason": "Mapping/translation provenance not resolved per entry."
+    },
+    {
+      "original_path": "aether-armsx2-port/config/skin-translations.json",
+      "original_audit_category": "C",
+      "reason": "Mapping/translation provenance not resolved per entry."
+    },
+    {
+      "original_path": "aether-armsx2-port/controller_audit.py",
+      "original_audit_category": "B",
+      "reason": "Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline."
+    },
+    {
+      "original_path": "aether-armsx2-port/fetch-donor.py",
+      "original_audit_category": "B",
+      "reason": "Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline."
+    },
+    {
+      "original_path": "aether-armsx2-port/graphics_schema.py",
+      "original_audit_category": "B",
+      "reason": "Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline."
+    },
+    {
+      "original_path": "aether-armsx2-port/notices.py",
+      "original_audit_category": "B",
+      "reason": "Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline."
+    },
+    {
+      "original_path": "aether-armsx2-port/patch_analog.py",
+      "original_audit_category": "C",
+      "reason": "Legacy Smali/resource patch material needs ownership and redistribution review."
+    },
+    {
+      "original_path": "aether-armsx2-port/patch_controller_settings.py",
+      "original_audit_category": "C",
+      "reason": "Legacy Smali/resource patch material needs ownership and redistribution review."
+    },
+    {
+      "original_path": "aether-armsx2-port/patch_controls.py",
+      "original_audit_category": "C",
+      "reason": "Legacy Smali/resource patch material needs ownership and redistribution review."
+    },
+    {
+      "original_path": "aether-armsx2-port/patch_dpad.py",
+      "original_audit_category": "C",
+      "reason": "Legacy Smali/resource patch material needs ownership and redistribution review."
+    },
+    {
+      "original_path": "aether-armsx2-port/patch_launch.py",
+      "original_audit_category": "C",
+      "reason": "Legacy Smali/resource patch material needs ownership and redistribution review."
+    },
+    {
+      "original_path": "aether-armsx2-port/patch_library.py",
+      "original_audit_category": "C",
+      "reason": "Legacy Smali/resource patch material needs ownership and redistribution review."
+    },
+    {
+      "original_path": "aether-armsx2-port/patch_lifecycle.py",
+      "original_audit_category": "B",
+      "reason": "Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline."
+    },
+    {
+      "original_path": "aether-armsx2-port/patch_pause_menu.py",
+      "original_audit_category": "C",
+      "reason": "Legacy Smali/resource patch material needs ownership and redistribution review."
+    },
+    {
+      "original_path": "aether-armsx2-port/patch_remoteplay.py",
+      "original_audit_category": "C",
+      "reason": "Legacy Smali/resource patch material needs ownership and redistribution review."
+    },
+    {
+      "original_path": "aether-armsx2-port/patch_skins.py",
+      "original_audit_category": "C",
+      "reason": "Legacy Smali/resource patch material needs ownership and redistribution review."
+    },
+    {
+      "original_path": "aether-armsx2-port/patch_touch_targets.py",
+      "original_audit_category": "C",
+      "reason": "Legacy Smali/resource patch material needs ownership and redistribution review."
+    },
+    {
+      "original_path": "aether-armsx2-port/project_config.py",
+      "original_audit_category": "B",
+      "reason": "Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline."
+    },
+    {
+      "original_path": "aether-armsx2-port/remote-smali/org/local/aetherarms/RemotePageFragment.smali",
+      "original_audit_category": "C",
+      "reason": "Legacy method bodies/ABI integration need redistribution verification."
+    },
+    {
+      "original_path": "aether-armsx2-port/remote-smali/org/local/aetherarms/RemotePlaySettingsActivity.smali",
+      "original_audit_category": "C",
+      "reason": "Legacy method bodies/ABI integration need redistribution verification."
+    },
+    {
+      "original_path": "aether-armsx2-port/remote-smali/org/local/aetherarms/RemoteTabTitles.smali",
+      "original_audit_category": "C",
+      "reason": "Legacy method bodies/ABI integration need redistribution verification."
+    },
+    {
+      "original_path": "aether-armsx2-port/remote-smali/org/local/aetherarms/RemoteTabsAdapter.smali",
+      "original_audit_category": "C",
+      "reason": "Legacy method bodies/ABI integration need redistribution verification."
+    },
+    {
+      "original_path": "aether-armsx2-port/remote-smali/org/local/aetherarms/RemoteTabsFragment.smali",
+      "original_audit_category": "C",
+      "reason": "Legacy method bodies/ABI integration need redistribution verification."
+    },
+    {
+      "original_path": "aether-armsx2-port/skin_strings.py",
+      "original_audit_category": "B",
+      "reason": "Private build/backup/generator context; omitted to avoid presenting an incomplete or unsafe APK pipeline."
+    },
+    {
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/DpadGeometry.java",
+      "original_audit_category": "C",
+      "reason": "Copied legacy artwork geometry; grant not established."
+    },
+    {
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/GraphicsSchema.java",
+      "original_audit_category": "B",
+      "reason": "Additional conservative hold: generated from a category-C configuration input; source header alone does not clear that input."
+    },
+    {
+      "original_path": "aether-armsx2-port/src/org/local/aetherarms/PadRoutes.java",
+      "original_audit_category": "B",
+      "reason": "Additional conservative hold: generated from a category-C configuration input; source header alone does not clear that input."
+    },
+    {
+      "original_path": "aether-armsx2-port/tests/check-remote-play.py",
+      "original_audit_category": "B",
+      "reason": "Private full-suite runner depends on excluded decoded/build inputs and original layout."
+    },
+    {
+      "original_path": "aether-armsx2-port/tests/controller-ui-stubs/android/app/Activity.java",
+      "original_audit_category": "C",
+      "reason": "ABI reconstruction or test-stub grant not sufficiently established."
+    },
+    {
+      "original_path": "aether-armsx2-port/tests/controller-ui-stubs/android/app/Dialog.java",
+      "original_audit_category": "C",
+      "reason": "ABI reconstruction or test-stub grant not sufficiently established."
+    },
+    {
+      "original_path": "aether-armsx2-port/tests/controller-ui-stubs/android/content/DialogInterface.java",
+      "original_audit_category": "C",
+      "reason": "ABI reconstruction or test-stub grant not sufficiently established."
+    },
+    {
+      "original_path": "aether-armsx2-port/tests/controller-ui-stubs/android/view/View.java",
+      "original_audit_category": "C",
+      "reason": "ABI reconstruction or test-stub grant not sufficiently established."
+    },
+    {
+      "original_path": "aether-armsx2-port/tests/remote-deps/json-20250517.jar",
+      "original_audit_category": "A",
+      "reason": "All binary dependencies are omitted; native dependency rights/closure remain separate where category C."
+    },
+    {
+      "original_path": "aether-armsx2-port/tests/remote-deps/provenance.json",
+      "original_audit_category": "A",
+      "reason": "Optional internal document, metadata, styling or provenance not needed by this partial source export."
+    },
+    {
+      "original_path": "aether-armsx2-port/tests/run-checks.py",
+      "original_audit_category": "B",
+      "reason": "Private full-suite runner depends on excluded decoded/build inputs and original layout."
+    },
+    {
+      "original_path": "aether-armsx2-port/vendor/remoteplay/kotlin-stdlib-2.2.10.jar",
+      "original_audit_category": "B",
+      "reason": "All binary dependencies are omitted; native dependency rights/closure remain separate where category C."
+    },
+    {
+      "original_path": "aether-armsx2-port/vendor/remoteplay/libjingle_peerconnection_so.so",
+      "original_audit_category": "C",
+      "reason": "All binary dependencies are omitted; native dependency rights/closure remain separate where category C."
+    },
+    {
+      "original_path": "aether-armsx2-port/vendor/remoteplay/webrtc-1.3.10.jar",
+      "original_audit_category": "B",
+      "reason": "All binary dependencies are omitted; native dependency rights/closure remain separate where category C."
+    }
+  ],
+  "excluded_workspace_scopes": [
+    {
+      "path": "aether-armsx2-port/inputs/",
+      "reason": "Legacy APKs, decoded code/resources and rollback inputs; C/D."
+    },
+    {
+      "path": "aether-armsx2-port/build/",
+      "reason": "Generated private artifacts, credentials, caches and binary dependencies; excluded in full."
+    },
+    {
+      "path": "aether-armsx2-port/out/",
+      "reason": "Hybrid/test APKs and signing sidecars; excluded in full."
+    },
+    {
+      "path": "aether-armsx2-port/donor/",
+      "reason": "Donor APK, native binaries, artwork and bundle resources; no binary distribution in this export."
+    },
+    {
+      "path": "aether-armsx2-port/reports/",
+      "reason": "Raw logs, screenshots, disassembly and private build/device evidence; excluded in full."
+    },
+    {
+      "path": "armsx2-analysis/",
+      "reason": "No decompiled tree, APK, resource or disassembly is copied."
+    },
+    {
+      "path": "armsx2-custom/",
+      "reason": "No wholesale source-tree copy; only already-vendored verified A/B snapshots are used."
+    },
+    {
+      "path": "backups/",
+      "reason": "Private archives may contain signing material and legacy inputs; excluded in full."
+    },
+    {
+      "path": ".git/ (all original repositories)",
+      "reason": "No private object database, config, reflogs, remotes or commit history is copied."
+    }
+  ]
+}

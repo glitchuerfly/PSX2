@@ -1,0 +1,67 @@
+{
+  "validated_utc": "2026-10-30T09:29:48.880823+00:00",
+  "result": "BLOCKED",
+  "ready_for_human_publication_review": false,
+  "publication_approved": false,
+  "complete_apk_buildable": false,
+  "complete_corresponding_source": false,
+  "copied_original_files": 131,
+  "copied_original_categories": {
+    "A": 3,
+    "B": 128
+  },
+  "allowlisted_source_hashes": "PASS",
+  "vendor_provenance": "PASS",
+  "java_kotlin_packages": "PASS",
+  "markdown_local_links": "PASS",
+  "allowlisted_secret_findings": [],
+  "original_workspaces_unchanged": true,
+  "original_git_head_and_index_unchanged": true,
+  "host_tests": {
+    "result": "PASS",
+    "suites": [
+      "AudioFocusChecks",
+      "RemotePadChecks",
+      "SkinChecks"
+    ],
+    "reference_only_suites": 7,
+    "network_used": false,
+    "device_used": false
+  },
+  "unexpected_unverified_files": [
+    {
+      "path": ".github/assets/screenshots/custom_buttons.png",
+      "sha256": "6f805d1877995b93d746c7ba164cc52c7fee29b1a4bfc2677b3983b084dfc601",
+      "reason": "Unexpected screenshot outside audit allowlist; redistribution rights not verified; not copied by this export operation."
+    },
+    {
+      "path": ".github/assets/screenshots/gameplay.png",
+      "sha256": "6f6b32efd32a46fb6ebdb9fde227b0b99de822bf1f597e1afa5fcdb8ada532c8",
+      "reason": "Unexpected screenshot outside audit allowlist; redistribution rights not verified; not copied by this export operation."
+    },
+    {
+      "path": ".github/assets/screenshots/library.png",
+      "sha256": "ff4534c05ca3208e9b53a019391200f29ef55b80cb38c2d55390721f422adea6",
+      "reason": "Unexpected screenshot outside audit allowlist; redistribution rights not verified; not copied by this export operation."
+    },
+    {
+      "path": ".github/assets/screenshots/remote_play.png",
+      "sha256": "2b04c33d8405a520ff8ca57fe2c5ec81fe227d24253073fa0bdfdf282c285ef1",
+      "reason": "Unexpected screenshot outside audit allowlist; redistribution rights not verified; not copied by this export operation."
+    },
+    {
+      "path": ".github/assets/app_icon.png",
+      "original_path": "aether-armsx2-port/inputs/legacy/decoded/res/mipmap-xxxhdpi/ic_launcher.png",
+      "sha256": "52302505e71197a20adcca936ab2ae56e31e164757681818f70f741e0cec5580",
+      "audit_category": "C",
+      "user_requested_local_copy": true,
+      "publication_cleared": false,
+      "reason": "App artwork from legacy input; no separate artwork redistribution grant established. Explicit local copy request does not establish copyright/trademark rights."
+    }
+  ],
+  "final_checksums_created": false,
+  "zip_created": false,
+  "blocker": "Four screenshots and one explicitly requested app icon remain outside the audited A/B source allowlist. Their visual-asset redistribution rights are unverified.",
+  "source_snapshot_commit": "f0276fa2804f9174492b69f7cebbcf4c338bcc86",
+  "later_private_app_update": "Controller changes were separately requested after the export. Exported source remains the earlier pinned snapshot."
+}
