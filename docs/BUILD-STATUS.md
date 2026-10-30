@@ -35,7 +35,7 @@ Retained Java/Kotlin packages do not make these omitted prerequisites available.
 
 ## Private build versus public export
 
-The private checkpoint a2de3945e2404dc8a26e221c70a16976492ef4a2 built and passed its full host checks, and its APK was installed separately. Those results belong to the private project. They do not establish that this public source collection builds an APK.
+The private checkpoint 1e475c4a45930b2e784582f42f5885751c47c01c built and passed its full host checks, and its APK was installed separately. Those results belong to the private project. They do not establish that this public source collection builds an APK.
 
 The public export's own results are recorded in VALIDATION-REPORT.json. Runtime appearance, games, networking and native execution are not tested here.
 

@@ -126,14 +126,25 @@ public final class Bridge {
         }
     }
     private static SharedPreferences prefs() { return app.getSharedPreferences(app.getPackageName() + "_preferences", Context.MODE_PRIVATE); }
-    /** Resolve launch identity before the first native frame, independently of transient Activity.G. */
+    /** Resolve boot identity without waiting for the native first-frame observer. */
+    private static int launchControllerCRC(String path,String serial,int listed){
+        String saved=app.getSharedPreferences("aetherarms_controller_identity",0).getString(path,"");
+        int remembered=0;
+        if(saved.startsWith(serial+"\n"))try{remembered=(int)Long.parseLong(saved.substring(serial.length()+1),16);}catch(NumberFormatException ignored){}
+        return ControllerSettings.launchCRC(dataRoot,serial,listed,remembered);
+    }
     public static File controllerProfile(Activity activity) throws IOException {
         String path=activity.getIntent().getStringExtra("bootPath");
-        int crc=path!=null&&path.equals(gamePath)?controllerCRC:0;
+        int crc;
+        synchronized(Bridge.class){crc=sessionActive&&path!=null&&path.equals(gamePath)?controllerCRC:0;}
         if(crc==0&&path!=null&&!path.isEmpty()){
             Object entry=hostCall("getGameListEntry",new Class<?>[]{String.class},path);
-            if(entry!=null)try{crc=(Integer)entry.getClass().getMethod("getCRC").invoke(entry);}
-            catch(ReflectiveOperationException failure){throw new IOException("Launch game CRC ABI",failure);}
+            String serial="";int listed=0;
+            if(entry!=null)try{
+                listed=(Integer)entry.getClass().getMethod("getCRC").invoke(entry);
+                serial=(String)entry.getClass().getMethod("getSerial").invoke(entry);
+            }catch(ReflectiveOperationException failure){throw new IOException("Launch game identity ABI",failure);}
+            crc=launchControllerCRC(path,serial,listed);
         }
         return ControllerSettings.profileFile(dataRoot,crc);
     }
@@ -155,7 +166,9 @@ public final class Bridge {
         // The core's API-not-Automatic popup belongs to its settings-warning group.
         NativeApp.setSetting("EmuCore","WarnAboutUnsafeSettings","bool","false");
         NativeApp.commitSettings();
-        ControllerLoadNotice.applied(noticeSession,controllerLoaded);
+        boolean gameController=false;
+        try{gameController=ControllerSettings.gameConfigEnabled(dataRoot,controllerCRC);}catch(IOException failure){Log.w(TAG,"Cannot read controller configuration status",failure);}
+        ControllerLoadNotice.applied(noticeSession,controllerLoaded&&gameController);
         ControllerRuntime.reapplyRemote();
         NativeApp.usbApplyPorts();
         NativeApp.setFreeSoftwareNotice(false);
@@ -176,7 +189,7 @@ public final class Bridge {
                 GraphicsConfig.prepareProfile(dataRoot,gameSerial,gameCRC);
             } catch(ReflectiveOperationException failure) { Log.w(TAG,"Cannot resolve pre-boot profile",failure); }
         }
-        controllerCRC=gameCRC; // Retain the known profile through initial BIOS frames with CRC zero.
+        controllerCRC=gamePath.isEmpty()?0:launchControllerCRC(gamePath,gameSerial,gameCRC); // Ready before VM boot, retained through BIOS CRC zero.
         stopping = false;
         synchronized (Bridge.class) {
             limiterMode = 0; fastForwardHeld = false;
@@ -215,8 +228,8 @@ public final class Bridge {
         }
     }
     private static void observeBoot(String state) {
-        String previous = "";
-        boolean started = false;
+        String previous = "", bootPath=gamePath;
+        boolean started = false, identityRemembered=false;
         try {
             while (!stopping && !Thread.currentThread().isInterrupted()) {
                 // A pause can arrive before the native VM exists during boot.
@@ -231,6 +244,10 @@ public final class Bridge {
                     if (!identity.equals(previous)) {
                         gameSerial = serial; gameCRC = crc;
                         if(crc!=0)controllerCRC=crc;
+                        if(crc!=0&&!identityRemembered){
+                            app.getSharedPreferences("aetherarms_controller_identity",0).edit().putString(bootPath,serial+"\n"+String.format(Locale.ROOT,"%08X",crc)).apply();
+                            identityRemembered=true;
+                        }
                         ControllerRumble.refresh(dataRoot,controllerCRC,prefs().getAll());
                         if (GraphicsConfig.prepareProfile(dataRoot,serial,crc)) {
                             NativeApp.reloadGameSettingsLayer();

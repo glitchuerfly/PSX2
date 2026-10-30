@@ -45,6 +45,29 @@ public final class ControllerSettings {
             }
         }return out;
     }
+    /** Only an enabled game controller override warrants the per-game loaded message. */
+    public static boolean gameConfigEnabled(File root,int crc) throws IOException {
+        return crc!=0&&truth(read(new File(root,"gamesettings/"+String.format(Locale.ROOT,"%08X.ini",crc))).get("Pad/UseGameSettingsForController"));
+    }
+    /** Never guess between multiple ELF profiles. Native identity replaces this hint when known. */
+    public static int launchCRC(File root,String serial,int listed,int remembered){
+        if(listed!=0)return listed;
+        if(remembered!=0)return remembered;
+        if(serial==null||serial.isEmpty())return 0;
+        String prefix=serial.replaceAll("[^A-Za-z0-9._-]","_")+"_";
+        File directory=new File(root,"gamesettings");File[] files=directory.listFiles();
+        if(files==null)return 0;
+        int found=0;
+        for(File file:files){
+            String name=file.getName();
+            if(!file.isFile()||!name.startsWith(prefix)||!name.substring(prefix.length()).matches("[0-9A-Fa-f]{8}\\.ini"))continue;
+            int crc=(int)Long.parseLong(name.substring(prefix.length(),prefix.length()+8),16);
+            if(crc==0||!new File(directory,String.format(Locale.ROOT,"%08X.ini",crc)).isFile())continue;
+            if(found!=0&&found!=crc)return 0;
+            found=crc;
+        }
+        return found;
+    }
     /** Selected on-disk controller layer; null means global settings. */
     public static File profileFile(File root,int crc) throws IOException {
         File gameFile=new File(root,"gamesettings/"+String.format(Locale.ROOT,"%08X.ini",crc));

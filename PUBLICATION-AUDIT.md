@@ -9,7 +9,7 @@ Prepared on 2026-10-30 from private project commit f0276fa2804f9174492b69f7cebbc
 
 ## Source update review — 2026-10-30
 
-The current source snapshot is `a2de3945e2404dc8a26e221c70a16976492ef4a2`. It contains 135 original file copies (3 A, 132 B): the original 131-file selection plus ControllerBindingIcons.java, ControllerLoadNotice.java, SkinLoadState.java and SkinLoadChecks.java. Each new file was inspected as original adapter/test logic with an explicit GPL-3.0-or-later header; it contains no recovered legacy implementation, copied vector path, artwork pixels or binary. Nine previously allowlisted source files were refreshed from the current private checkpoint. Full per-file hashes and provenance are in PUBLICATION-MANIFEST.json.
+The current source snapshot is `1e475c4a45930b2e784582f42f5885751c47c01c`. It contains 135 original file copies (3 A, 132 B): the original 131-file selection plus ControllerBindingIcons.java, ControllerLoadNotice.java, SkinLoadState.java and SkinLoadChecks.java. Each new file was inspected as original adapter/test logic with an explicit GPL-3.0-or-later header; it contains no recovered legacy implementation, copied vector path, artwork pixels or binary. Nine previously allowlisted source files were refreshed from the current private checkpoint. Full per-file hashes and provenance are in PUBLICATION-MANIFEST.json.
 
 The source delta and vendor/license hashes passed validation. Four public host suites passed without a device, downloads or networking. Existing remote visual assets remain unchanged and unverified, so this is a source-delta validation, not whole-repository publication clearance. The user-requested push uses a separate writable workspace checkout and preserves the latest remote README commit. Private source history is represented only by provenance commit identifiers, not uploaded Git objects.
 
@@ -103,3 +103,7 @@ The archive is created only after validation succeeds. No Git initialization, pr
 The selected source is prepared for human publication review on the evidence described above. No known C/D file is admitted to the selected export and no credential finding is accepted.
 
 Approval to upload has not been given. Whole-APK redistribution, mixed GPL/legacy scope, reconstructed interfaces, artwork, and trademarks still need separate permission/provenance or legal review where applicable. This report does not certify that a future distribution is legal.
+
+## Controller correction source delta
+
+The later correction updates five already allowlisted GPL adapter/test files without adding source categories, native binaries or assets. The same 135 original copies (3 A, 132 B) remain covered by per-file hashes/provenance. Real-format tests now cover per-game notification ON/OFF/missing and preboot identity selection; the partial APK-build limitation and unresolved pre-existing remote asset rights are unchanged.

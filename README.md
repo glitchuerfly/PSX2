@@ -49,8 +49,8 @@ ARMSX2 Hybrid is independently developed and is not an official release of ARMSX
 - **Static Analog:** Traditional fixed-position analog sticks.
 - **Custom Button Skins:** Customizable touchscreen button appearance.
 - Adjustable touchscreen layouts.
-- Controller profiles, added/removed buttons, and custom skins are selected before the first layout.
-- Brief controller configuration loaded acknowledgement, following OSD message preferences.
+- Controller layout and added/removed buttons are prepared before the VM starts; reused layouts also refresh visibility.
+- Per-game controller configuration acknowledgement in the left OSD column, shown only when that game configuration is enabled.
 - Multitouch input support.
 
 ### Enhanced Game Library

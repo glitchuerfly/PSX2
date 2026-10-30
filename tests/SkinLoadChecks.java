@@ -51,7 +51,7 @@ public final class SkinLoadChecks {
         java.nio.file.Path games=root.resolve("gamesettings");java.nio.file.Files.createDirectories(games);
         java.nio.file.Path profile=games.resolve("CA857E71.ini");
         try{
-            java.nio.file.Files.write(profile,("[Pad]\nUseGameSettingsForController = true\n[TouchscreenController]\nCustomSkin = game-skin\n[TouchscreenController/Landscape]\nDualShock2L2Visible = true\nDualShock2R2Visible = false\n").getBytes(java.nio.charset.StandardCharsets.UTF_8));
+            java.nio.file.Files.write(profile,("[Pad]\nUseGameSettingsForController = true\n[TouchscreenController]\nCustomSkin = game-skin\n[TouchscreenController/analog_sticks]\nToggleFastForwardLandscapeVisible = true\nMacro1LandscapeVisible = false\n").getBytes(java.nio.charset.StandardCharsets.UTF_8));
             java.util.Map<String,Object> global=new java.util.HashMap<>();global.put("TouchscreenController/CustomSkin","default");
             check("default".equals(org.local.aetherarms.ControllerSettings.effective(root.toFile(),0,global).get("TouchscreenController/CustomSkin")),"Zero-CRC fixture did not reproduce fallback");
             Object effective=org.local.aetherarms.ControllerSettings.effective(root.toFile(),(int)0xCA857E71L,global).get("TouchscreenController/CustomSkin");
@@ -59,10 +59,27 @@ public final class SkinLoadChecks {
             check(org.local.aetherarms.ControllerSettings.profileFile(root.toFile(),0)==null,"CRC zero must have no controller profile");
             check(profile.toFile().equals(org.local.aetherarms.ControllerSettings.profileFile(root.toFile(),(int)0xCA857E71L)),"First layout selected a different profile from core input");
             java.util.Map<String,Object> layout=org.local.aetherarms.ControllerSettings.effective(root.toFile(),(int)0xCA857E71L,global);
-            check(org.local.aetherarms.ControllerSettings.truth(layout.get("TouchscreenController/Landscape/DualShock2L2Visible")),"Added L2 missing at boot");
-            check(!org.local.aetherarms.ControllerSettings.truth(layout.get("TouchscreenController/Landscape/DualShock2R2Visible")),"Removed R2 reappeared at boot");
+            check(org.local.aetherarms.ControllerSettings.truth(layout.get("TouchscreenController/analog_sticks/ToggleFastForwardLandscapeVisible")),"Added fast-forward button missing at boot");
+            check(!org.local.aetherarms.ControllerSettings.truth(layout.get("TouchscreenController/analog_sticks/Macro1LandscapeVisible")),"Removed macro button reappeared at boot");
+
+            check(org.local.aetherarms.ControllerSettings.gameConfigEnabled(root.toFile(),(int)0xCA857E71L),"Enabled per-game configuration lost its notification");
+            check(!org.local.aetherarms.ControllerSettings.gameConfigEnabled(root.toFile(),0),"Unknown/BIOS CRC produced configuration notice");
+            check(!org.local.aetherarms.ControllerSettings.gameConfigEnabled(root.toFile(),0x12345678),"Game with no configuration produced notice");
+            java.nio.file.Path nativeProfile=games.resolve("SLPM-66848_CA857E71.ini");
+            java.nio.file.Files.write(nativeProfile,new byte[0]);
+            check(org.local.aetherarms.ControllerSettings.launchCRC(root.toFile(),"SLPM-66848",0,0)==(int)0xCA857E71L,"Known controller profile was deferred until first game frame");
+            check(org.local.aetherarms.ControllerSettings.launchCRC(root.toFile(),"OTHER-SERIAL",0,0)==0,"Different game inherited this profile");
+            check(org.local.aetherarms.ControllerSettings.launchCRC(root.toFile(),"SLPM-66848",0,0x76543210)==0x76543210,"Remembered boot identity was ignored");
+            check(org.local.aetherarms.ControllerSettings.launchCRC(root.toFile(),"SLPM-66848",0x12345678,0x76543210)==0x12345678,"Current game-list identity lost priority");
+            java.nio.file.Path other=games.resolve("12345678.ini"),nativeOther=games.resolve("SLPM-66848_12345678.ini");
+            java.nio.file.Files.write(other,new byte[0]);java.nio.file.Files.write(nativeOther,new byte[0]);
+            check(org.local.aetherarms.ControllerSettings.launchCRC(root.toFile(),"SLPM-66848",0,0)==0,"Ambiguous multi-ELF profile was guessed");
+            java.nio.file.Files.delete(other);java.nio.file.Files.delete(nativeOther);java.nio.file.Files.delete(nativeProfile);
+            java.nio.file.Files.write(profile,"[Pad]\nUseGameSettingsForController = false\n".getBytes(java.nio.charset.StandardCharsets.UTF_8));
+            global.put("Pad/UseGameSettingsForController",true); // global metadata must not enable this game
+            check(!org.local.aetherarms.ControllerSettings.gameConfigEnabled(root.toFile(),(int)0xCA857E71L),"Disabled per-game configuration still produced notice");
 
         }finally{java.nio.file.Files.deleteIfExists(profile);java.nio.file.Files.deleteIfExists(games);java.nio.file.Files.deleteIfExists(root);}
-        System.out.println("PASS: no Default/previous-skin flash, warm cache, stale image and selection callbacks, same-id invalidation, retained-CRC profile, explicit Default and bounded cache.");
+        System.out.println("PASS: no Default/previous-skin flash, warm cache, stale image and selection callbacks, same-id invalidation, preboot identity/visibility, per-game notice OFF/default, explicit Default and bounded cache.");
     }
 }

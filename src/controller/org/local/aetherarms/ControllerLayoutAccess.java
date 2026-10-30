@@ -22,6 +22,23 @@ public final class ControllerLayoutAccess {
             android.util.Log.e("AetherArmsBridge","Cannot resolve launch controller configuration",failure);
         }catch(ReflectiveOperationException failure){throw new IllegalStateException("Aether launch controller profile ABI",failure);}
     }
+    /** Called on the UI thread after host views exist, before its VM thread starts. */
+    public static void prepareLaunch(Activity activity){
+        resolveActivity(activity);
+        try{activity.getClass().getMethod("D").invoke(activity);}
+        catch(ReflectiveOperationException failure){throw new IllegalStateException("Aether initial controller layout ABI",failure);}
+    }
+    /** O() may reuse the existing view type; it must still apply changed visibility. */
+    public static void refreshActivity(Activity activity){
+        try{
+            View view=(View)activity.getClass().getField("Q").get(activity);
+            if(view!=null){
+                view.getClass().getMethod("E").invoke(view);
+                view.getClass().getMethod("x").invoke(view);
+                SkinStore.controllerConfigured(view);
+            }
+        }catch(ReflectiveOperationException failure){throw new IllegalStateException("Aether controller refresh ABI",failure);}
+    }
     public static Object profile(View view){
         if(editors.containsKey(view))return editors.get(view);
         try{Object owner=view.getClass().getField("i").get(view);return owner==null?null:owner.getClass().getField("G").get(owner);}

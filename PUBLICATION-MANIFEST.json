@@ -1,7 +1,7 @@
 {
   "format": 1,
   "created_utc": "2026-10-30T09:15:21.320945+00:00",
-  "source_project_commit": "a2de3945e2404dc8a26e221c70a16976492ef4a2",
+  "source_project_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
   "upstream_commit": "ba9d8460a56889180b999c52131c48fb5b4ab77a",
   "scope": "Partial audited source export; NOT complete Corresponding Source for the hybrid APK.",
   "selection_policy": "Explicit A/B allowlist; C/D and conservative generated-data holds omitted.",
@@ -78,9 +78,9 @@
       "audit_category": "B",
       "license": "GPL-3.0-or-later",
       "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
-      "sha256": "26f8818d49196725bfae5d4b4c926179ba750bd526ad4e5ff1a006cfc481e969",
-      "source_last_commit": "a2de3945e2404dc8a26e221c70a16976492ef4a2",
-      "source_last_change_date": "2026-10-30T18:29:26+08:00",
+      "sha256": "af5e0c9a51adf857f8bbe174b12be5c0a63f6c9386bc299557c64354c25aae04",
+      "source_last_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
+      "source_last_change_date": "2026-10-30T18:46:06+08:00",
       "content_modified_for_export": false
     },
     {
@@ -133,9 +133,9 @@
       "audit_category": "B",
       "license": "GPL-3.0-or-later",
       "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
-      "sha256": "11e5a15e52a7c42626ae4cd4a4ad10a664e6e317674f8264e99e4735e02f3370",
-      "source_last_commit": "a2de3945e2404dc8a26e221c70a16976492ef4a2",
-      "source_last_change_date": "2026-10-30T18:29:26+08:00",
+      "sha256": "a659401fa8cbec3f75b03d746f0398672c57b80465af20202f3994bc3aa5c89a",
+      "source_last_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
+      "source_last_change_date": "2026-10-30T18:46:06+08:00",
       "content_modified_for_export": false
     },
     {
@@ -199,9 +199,9 @@
       "audit_category": "B",
       "license": "GPL-3.0-or-later",
       "basis": "Original audit B; adapter GPL declaration and retained SPDX header.",
-      "sha256": "0e55677f6a187971780a4dbdb6565aa84f01ea1b414f160ee8ec0a3c7cbeb35e",
-      "source_last_commit": "a2de3945e2404dc8a26e221c70a16976492ef4a2",
-      "source_last_change_date": "2026-10-30T18:29:26+08:00",
+      "sha256": "0bd426f8a9e184b2fc52f90323730c413c0038ac1186f2b107f041f1df43e712",
+      "source_last_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
+      "source_last_change_date": "2026-10-30T18:46:06+08:00",
       "content_modified_for_export": false
     },
     {
@@ -1465,9 +1465,9 @@
       "audit_category": "B",
       "license": "GPL-3.0-or-later",
       "basis": "Reviewed original hybrid Java/test source added after the initial audit; explicit SPDX grant retained. Contains adapter logic or artwork identifiers only; no decoded implementation, artwork pixels or copied vector paths.",
-      "sha256": "13aac138c465e65ec00d777d0dd9145e28e7a625cc99a58b15d78f7ab9d6086c",
-      "source_last_commit": "a2de3945e2404dc8a26e221c70a16976492ef4a2",
-      "source_last_change_date": "2026-10-30T18:29:26+08:00",
+      "sha256": "50ae83a78bf79f7ae3a83a550ed1e9d59c18f2fbb475b21a2448b2a73d264014",
+      "source_last_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
+      "source_last_change_date": "2026-10-30T18:46:06+08:00",
       "content_modified_for_export": false
     },
     {
@@ -1487,9 +1487,9 @@
       "audit_category": "B",
       "license": "GPL-3.0-or-later",
       "basis": "Reviewed original hybrid Java/test source added after the initial audit; explicit SPDX grant retained. Contains adapter logic or artwork identifiers only; no decoded implementation, artwork pixels or copied vector paths.",
-      "sha256": "ddcd57b6600ae5990662cd0fefdb786d10ca88770a48e6b68d7ed4442e2fd44a",
-      "source_last_commit": "a2de3945e2404dc8a26e221c70a16976492ef4a2",
-      "source_last_change_date": "2026-10-30T18:29:26+08:00",
+      "sha256": "838325ec84e7091affaa47443060b3e40016e403b69e252f50b3628ec34d059d",
+      "source_last_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
+      "source_last_change_date": "2026-10-30T18:46:06+08:00",
       "content_modified_for_export": false
     }
   ],
@@ -1834,28 +1834,20 @@
       "reason": "No private object database, config, reflogs, remotes or commit history is copied."
     }
   ],
-  "previous_source_project_commit": "f0276fa2804f9174492b69f7cebbcf4c338bcc86",
-  "updated_utc": "2026-10-30T10:30:04.832256+00:00",
+  "previous_source_project_commit": "a2de3945e2404dc8a26e221c70a16976492ef4a2",
+  "updated_utc": "2026-10-30T10:46:25.878197+00:00",
   "source_update_review": {
-    "private_commit": "a2de3945e2404dc8a26e221c70a16976492ef4a2",
+    "private_commit": "1e475c4a45930b2e784582f42f5885751c47c01c",
     "modified_or_new_sources": [
-      "src/controller/org/local/aetherarms/AnalogTouch.java",
       "src/bridge/org/local/aetherarms/Bridge.java",
-      "src/controller/org/local/aetherarms/ButtonTouch.java",
       "src/controller/org/local/aetherarms/ControllerLayoutAccess.java",
-      "src/controller/org/local/aetherarms/ControllerRuntime.java",
       "src/controller/org/local/aetherarms/ControllerSettings.java",
-      "src/controller/org/local/aetherarms/DpadTouch.java",
-      "src/skins/org/local/aetherarms/SkinRenderer.java",
-      "src/skins/org/local/aetherarms/SkinStore.java",
-      "src/controller/org/local/aetherarms/ControllerBindingIcons.java",
       "src/controller/org/local/aetherarms/ControllerLoadNotice.java",
-      "src/skins/org/local/aetherarms/SkinLoadState.java",
       "tests/SkinLoadChecks.java"
     ],
-    "new_original_source_files": 4,
+    "new_original_source_files": 0,
     "binary_assets_added": false,
     "private_history_exported": false,
-    "scope": "Reviewed source delta only. Existing GitHub visual assets remain outside A/B source rights review."
+    "scope": "Controller correction source delta only. Existing remote visual assets remain outside A/B source rights review."
   }
 }

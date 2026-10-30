@@ -20,3 +20,5 @@ The latest included pause-menu change calls the existing host page transaction w
 No game compatibility, performance, image quality, networking, or complete emulator runtime claim is established by the public host checks.
 
 The controller startup update shares profile-file selection between core settings and the initial legacy controller layout. It includes atomic artwork/cache state and stale-selection guards. ControllerLoadNotice provides a short Android overlay after successful configuration/native commit, using the OSD message switch/scale; it does not insert into the donor's native OSD queue. The private legacy hook, Default PNG assets and Android host remain excluded, so the exported source alone cannot demonstrate this UI behavior.
+
+The corrected startup path prepares the actual controller before VM startup and refreshes reused views immediately. The configuration acknowledgement is at the left and is limited to an enabled per-game controller configuration; global-only configuration does not trigger it.

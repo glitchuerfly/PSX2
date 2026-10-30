@@ -1,6 +1,18 @@
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
 # Changelog
 
+## Controller startup correction — 2026-10-30
+
+Reviewed source checkpoint `1e475c4a45930b2e784582f42f5885751c47c01c`.
+
+- Prepare controller controls before VM startup, rather than waiting for the first game-frame callback.
+- Reapply visibility and geometry when an existing controller view type is reused.
+- Resolve a missing game-list CRC from the remembered initial boot identity or one unambiguous existing serial/CRC profile pair; reject ambiguous candidates and inactive-session CRCs.
+- Move the configuration acknowledgement to the left OSD column and suppress it for global-only, disabled, missing and zero-CRC game configurations.
+- Extend the real-format controller visibility/profile regressions. The full private host suite and four public suites pass; device appearance remains user-tested.
+
+No native binary, APK, proprietary resource, signing material or private history is added. The notification remains an Android overlay styled like OSD, independent of the donor's native message queue.
+
 ## Controller startup source update — 2026-10-30
 
 Refreshed reviewed source from private checkpoint `a2de3945e2404dc8a26e221c70a16976492ef4a2`.

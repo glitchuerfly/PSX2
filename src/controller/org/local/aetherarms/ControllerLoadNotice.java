@@ -54,10 +54,15 @@ public final class ControllerLoadNotice {
             text.setIncludeFontPadding(false);text.setClickable(false);text.setFocusable(false);
             text.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
             GradientDrawable bg=new GradientDrawable();bg.setColor(0xff212121);bg.setCornerRadius(5*density*scale);bg.setStroke(1,0xff484848);text.setBackground(bg);
-            FrameLayout.LayoutParams params=new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT,Gravity.TOP|Gravity.CENTER_HORIZONTAL);
-            params.topMargin=Math.round(10*density*scale);
+            FrameLayout.LayoutParams params=new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT,Gravity.TOP|Gravity.LEFT);
+            // Share the left OSD column, reserving the first row for core patch status.
+            params.leftMargin=Math.round(10*density*scale);
+            params.topMargin=Math.round(46*density*scale);
             WindowInsets insets=root.getRootWindowInsets();
-            if(insets!=null&&android.os.Build.VERSION.SDK_INT>=28&&insets.getDisplayCutout()!=null)params.topMargin+=insets.getDisplayCutout().getSafeInsetTop();
+            if(insets!=null&&android.os.Build.VERSION.SDK_INT>=28&&insets.getDisplayCutout()!=null){
+                params.topMargin+=insets.getDisplayCutout().getSafeInsetTop();
+                params.leftMargin+=insets.getDisplayCutout().getSafeInsetLeft();
+            }
             text.setMaxWidth(Math.max(1,root.getWidth()-pad*4));
             ((FrameLayout)root).addView(text,params);
             text.setAlpha(0);text.animate().alpha(1).setDuration(150).start();

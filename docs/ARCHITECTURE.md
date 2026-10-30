@@ -38,3 +38,11 @@ The initial layout resolves the controller profile file from the launch entry CR
 SkinLoadState orders selections before main-thread dispatch, rejects obsolete decodes and publishes images/masks atomically. SkinStore caches two skins and keeps cold custom art pending rather than rendering Default. Controller-port icon code refers to Default resource identifiers; PNGs and legacy hooks are omitted.
 
 ControllerLoadNotice is a small Android UI overlay, since the pinned donor does not export a JNI arbitrary-OSD-message API. It waits for successful controller/native commit, presented game frames and ready skin, respects the OSD message switch/scale, and clears on background/session end. The core binaries remain unchanged. Its actual rendering and startup behavior are user-tested in the private app, not by this source export's host tests.
+
+### Startup correction
+
+ControllerLayoutAccess.prepareLaunch runs after the original Activity's host views exist and before its VM thread starts. The private onCreate hook builds the real D/O controller layout at that point; O resolves the controller store at entry and reapplies child visibility/geometry/skin at exit even if its view type was reused. These steps do not wait for observer polling or a later native frame.
+
+A missing game-list CRC can use the first nonzero boot identity remembered by exact launch path and matching serial, or one unambiguous existing serial/CRC profile pair. Current native identity supersedes hints; multiple ELF candidates are never guessed and an ended session's CRC is not reused as active state.
+
+The left-column configuration acknowledgement requires Pad/UseGameSettingsForController to be enabled in the game's own profile. Global controller settings alone, a missing profile or a disabled switch do not produce that notice.
