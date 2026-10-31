@@ -1,14 +1,35 @@
 {
-  "scope": "Local PSX2 branding/docs/icon and Gallery documentation only; no publication/source snapshot refresh.",
+  "scope": "User-authorized PSX2 branding, adaptive documentation icon and current Gallery documentation; source snapshot remains unchanged.",
   "name": "PSX2",
   "previous_name": "ARMSX2 Hybrid",
   "application_id": "com.psx2.glitch",
-  "private_app_validation": "reports/psx2-branding-validation.json in the private workspace",
-  "protected_files_verified": 137,
+  "private_app_version_code": 15284,
+  "installed_separately_on_owner_device": true,
+  "private_app_signer_and_package_verified": true,
+  "private_app_visual_runtime_verified": false,
+  "protected_files_verified": 160,
+  "original_remote_source_license_audit_test_screenshot_files_verified": 151,
   "screenshots_unchanged": true,
   "licenses_and_historical_audits_unchanged": true,
   "source_snapshot_unchanged": true,
   "remote_url_unchanged": true,
+  "icon_sha256": "365baba68ee240941eb3e828dfa8285e344aed869dfcc606ffdf2ffa82b2a0a1",
+  "icon_dimensions": [
+    1024,
+    1024
+  ],
+  "icon_matches_private_app_preview": true,
+  "complete_apk_buildable": false,
+  "complete_corresponding_source": false,
+  "whole_repository_publication_cleared": false,
+  "icon_artwork_general_license": "not assigned",
+  "public_host_checks": "PASS: four unchanged public suites",
+  "gallery_implementation_exported": false,
+  "blue_waves_artwork_bundled": false,
+  "new_binary_or_private_material_included": false,
+  "secret_pattern_check": "PASS for changed metadata/docs; no recognized private key/token patterns",
+  "publication_authorized_by_user": true,
+  "publication_status": "This report validates prepared contents; GitHub branch history records publication.",
   "updated_files": [
     ".github/assets/APP-ICON-PREVIEW.json",
     ".github/assets/app_icon.png",
@@ -23,13 +44,5 @@
     "docs/BUILD-STATUS.md",
     "docs/DATA-MIGRATION.md",
     "docs/FEATURES.md"
-  ],
-  "complete_apk_buildable": false,
-  "complete_corresponding_source": false,
-  "whole_repository_publication_cleared": false,
-  "pushed": false,
-  "icon_artwork_general_license": "not assigned",
-  "public_host_checks": "PASS: four unchanged public suites",
-  "gallery_implementation_exported": false,
-  "blue_waves_artwork_bundled": false
+  ]
 }

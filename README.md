@@ -62,7 +62,9 @@ PSX2 is independently developed and is not an official release of ARMSX2, Aether
 - Automatic game cover downloads.
 - 2D and 3D game cover display modes.
 - Familiar game library navigation.
-- Customizable library appearance.
+- Library-only Background Gallery: Default (Follow App Theme), Classic Plasma, and Custom Image.
+- Classic Plasma uses broad, soft procedural blue shading with a 30 FPS target and foreground-only animation.
+- Custom Image opens the picker when no image exists, reuses the selected image across preset switches, and offers Choose Image for replacement; Apply saves the choice.
 
 ### Remote Play
 
@@ -113,6 +115,8 @@ Some emulator settings and features may still require additional compatibility w
 ## Development Status
 
 **Current Version:** 1.0.0-beta
+
+The current private Android build is **15284**, named **PSX2**, with application ID `com.psx2.glitch`. It has been installed separately on the owner's device. Build/host validation passes; this publication update does not establish full device UI or gameplay acceptance. The public repository remains a partial source preview, with no APK download. See [build status](docs/BUILD-STATUS.md).
 
 PSX2 is currently under active development.
 

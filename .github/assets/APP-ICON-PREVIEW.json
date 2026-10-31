@@ -8,6 +8,8 @@
   "sha256": "365baba68ee240941eb3e828dfa8285e344aed869dfcc606ffdf2ffa82b2a0a1",
   "separate_artwork_reuse_license": "Not specified; source GPL does not assign one.",
   "historical_asset_review": ".github/assets/ASSET-REVIEW.json remains an unchanged historical record.",
-  "uploaded": false,
-  "screenshots_modified": false
+  "screenshots_modified": false,
+  "user_authorized_publication": true,
+  "matches_private_app_build": 15284,
+  "publication_scope": "Current approved adaptive preview at .github/assets/app_icon.png; no new general artwork reuse license."
 }

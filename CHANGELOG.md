@@ -1,6 +1,14 @@
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
 # Changelog
 
+## PSX2 documentation and adaptive icon publication — build 15284
+
+- Publish the previously prepared PSX2 name and approved adaptive icon preview; retain the existing repository URL and upstream credits.
+- Document Classic Plasma, formerly Classic Blue: 1.75 times broader wavelengths, softer low-frequency detail, and the unchanged 30 FPS foreground-only lifecycle.
+- Document Custom Image reuse across preset switches, explicit Choose Image replacement, and Apply-only persistence.
+- Update app identity metadata to the private build15284, which was installed separately with the same package and signing certificate.
+- Retain the historical partial source snapshot, license/audit records and screenshots. No APK, core/native library, signing material, private history or user data is added.
+
 ## PSX2 branding and application identity — 2026-10-31
 
 - Rename the public project from ARMSX2 Hybrid to PSX2; retain the repository URL and upstream credits.

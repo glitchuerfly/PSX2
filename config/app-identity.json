@@ -4,8 +4,10 @@
   "previous_name": "ARMSX2 Hybrid",
   "previous_application_id": "com.armsx2.hybrid",
   "version_name": "1.0.0-beta",
-  "version_code": 15280,
+  "version_code": 15284,
   "github_remote_renamed": false,
   "complete_apk_buildable_from_this_export": false,
-  "branding_only_test_version_code": 15279
+  "branding_only_test_version_code": 15279,
+  "current_library_preset_name": "Classic Plasma",
+  "full_device_ui_verified": false
 }

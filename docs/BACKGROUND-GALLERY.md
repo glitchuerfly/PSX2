@@ -1,79 +1,66 @@
-# PSX2 Background Gallery — separate candidate 15280
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+# PSX2 Background Gallery — private build 15284
 
-This library-only UI extends the existing sidebar **Change Background** entry.
-It is a separate source checkpoint/APK from branding-only candidate15279 and
-from the installed Stage 2 BIOS APK15278. No new APK is installed automatically.
-BIOS migration, core/JNI, library metadata/SAF, covers, controls and Remote Play
-behavior are unchanged. It never applies artwork to gameplay or in-game menus.
+This document describes the current private app. The newer Gallery implementation
+is not included in this historical partial source snapshot, and this repository
+cannot build the complete APK. The existing Change Background sidebar entry opens
+a compact native dialog over Game Library, with preview and standard Cancel/Apply.
 
-| Choice | Behavior | Source/rights |
-| --- | --- | --- |
-| Default (Follow App Theme) | Use the existing app theme surface; follow system/light/dark preferences | Original integration |
-| Classic Blue | Original angular blue vector backdrop inspired by OPL's palette, with no copied OPL/Sony assets | app-assets/backgrounds/classic_blue.xml, GPL-3.0-or-later |
-| Blue Waves (ARMSX2) | Listed but disabled until artwork distribution rights can be verified; no substitute/fake preview | Official-source asset located; not bundled/recreated |
-| Custom Image | User selects a readable image with SAF; bounded decoded preview and read permission persisted only after Apply | User-chosen content, never bundled or uploaded |
+| Choice | Current behavior |
+| --- | --- |
+| Default (Follow App Theme) | Uses the existing Follow System/Light/Dark theme surface. |
+| Classic Plasma | Original procedural blue shading, with broad soft variation and a static fallback. |
+| Custom Image | Bounded read-only SAF image preview; user images are not bundled or uploaded. |
 
-There is no Dark Minimal preset; app Dark Theme covers that purpose.
+Classic Plasma was previously displayed as Classic Blue. The internal saved
+CLASSIC_BLUE identifier is retained, so existing choices do not reset.
+There is no separate Dark Minimal option; the app theme covers that use case.
+Blue Waves artwork is not bundled and is not an offered choice.
 
-## Draft, preview and persistence
+## Classic Plasma
 
-The gallery uses a separate private Activity with app language and light/dark/
-system theme context selected before views are created. Previewing a preset or
-selecting an image changes only an in-memory draft. Cancel/Back discard it.
-Only Apply persists mode/URI in the versioned psx2_library_background_v1 store.
-A failed disk commit attempts restoration of the previous in-memory selection;
-a newly acquired URI grant is released on commit failure. Existing grants are
-not revoked, since other features may share them.
+The original Android renderer uses a reusable48x48 bitmap with a30FPS target.
+Build15284 broadens primary wavelengths1.75times around the same field center,
+reduces secondary detail frequency from1.9to1.35 and its weight from14%to4%.
+The blue palette and temporal rate remain unchanged. Library cover sizes/layout
+and the existing lifecycle gates are preserved. Animation runs only in the visible,
+focused, resumed library and stops on background/focus loss/detach/destroy; the
+Gallery uses a still preview. A static fallback remains available.
 
-Images are opened read-only and bounded to 16MiB encoded input; decode dimensions
-are sampled to at most2048 pixels per edge. IO and decode run off the main thread.
-Obsolete preview callbacks are rejected; closing the Activity cancels queued work
-and disposes its preview. Images are not copied into another storage directory.
-Apply is unavailable while decoding or on an unreadable/invalid selection.
-A theme-colored scrim keeps library text readable in both light and dark themes.
+Reference research distinguished OPL0.9.2's procedural Perlin plasma from the
+modern default theme, which selects a static PNG. Relevant upstream functions are
+src/gui.c:guiCalcPerlin/guiDrawBGPlasma, src/themes.c:initBackground and
+src/renderman.c:rmEndFrame. PSX2's independently written scalar-value renderer
+does not copy OPL code, gradient/permutation tables, artwork or community themes.
+OPL reference: https://github.com/ps2homebrew/Open-PS2-Loader/tree/da8e3c24651f2f36ce6ce42ee928d8a103f3debd
 
-An already imported legacy background.jpg in this app's own data root is honored
-when no gallery choice exists. Selecting Default never deletes that file. The
-new package does not read the old app's storage; any eventual old background
-transfer is part of the separate user-approved migration plan.
+## Custom Image and persistence
 
-## Blue Waves investigation
+The first Custom Image selection immediately opens the system image picker if
+no image URI exists. Once an image is selected, switching to another preset and
+back reuses the draft image without launching the picker again. A previously
+applied image is also reused when the dialog is reopened. Choose Image explicitly
+opens the picker to replace it; cancelling replacement keeps the prior image.
 
-Existing source checkout: ../armsx2-custom at ba9d8460a56889180b999c52131c48fb5b4ab77a.
-Real files found:
+Only Apply persists the chosen mode/URI and acquires a required persistable read
+grant. Cancel/Back discard the draft. Images are opened read-only, limited to16MiB
+encoded input, and sampled to at most2048pixels per edge. Worker cancellation and
+stale-result guards keep previews bounded. No user image is copied or deleted.
+Existing saved preferences and the app's legacy background.jpg handling are kept.
+A revoked/unreadable image shows an error and the Choose Image action.
 
-- platforms/android/app/src/main/res/drawable-nodpi/library_bg_xmb.jpg
-- platforms/android/app/src/main/java/com/armsx2/ui/home/HomeScreen.kt
-- platforms/android/app/src/main/java/com/armsx2/ui/home/LibraryBackground.kt
-- platforms/android/app/src/main/java/com/armsx2/ui/home/LibraryWaveBackground.kt
-- COPYING.GPLv3
+The app does not automatically read another package's private files or SAF grants.
+Any old-package data transfer remains subject to the separate migration plan.
 
-HomeScreen references the JPEG as its still backdrop under XmbGlView. The other
-wave implementation is a procedural fallback; it is not evidence of the JPEG's
-artwork authorship. The root GPL text is present, but no asset-specific copyright,
-author/source or explicit artwork grant was established in the inspected files
-and available shallow history. This is conservatively category C pending scope/
-provenance verification, not a conclusion that upstream distribution is unlawful.
-No JPEG or adapted copy has been included, and the same image is not recreated.
-Hashes and exact source evidence are in config/background-gallery-provenance.json.
+## Scope and verification
 
-If adequate permission/provenance becomes available, use the exact upstream asset
-with required notices; review enabling the Blue Waves option separately. Do not
-replace the disabled option with invented metadata or claim a root-source license
-automatically proves every third-party artwork's rights.
+Private host tests exercise the production field/clock and draft/picker policy;
+Android lifecycle simulations are explicitly host-only. Private APK validation
+confirms package/signature, icon/fallback resources, native equality and unchanged
+cover/library resources. Installing15284 does not establish full UI/performance
+acceptance. Actual picker behavior, rotation, visual smoothness, GPU/memory/frame
+pacing and gameplay remain device-test concerns, not claims made by this export.
 
-## Validation and limits
-
-Host tests exercise the production draft/commit/cancel policy, store failure,
-restart, valid URI schemes and the conditional Blue Waves gate. Static checks
-cover private Activity/SAF grants, read bounds, locale/theme initialization,
-MainActivity high-register result hooks and unchanged Stage 2 BIOS sources.
-The APK is built/checked for manifest, new classes/resources, original native
-hashes, signer, package and retained migrated metadata/BIOS routes. The complete
-existing host suite is run. These do not prove UI runtime or provider behavior.
-
-Device acceptance remains pending: preview each allowed preset, Cancel/reopen,
-Apply/restart, custom image/provider revocation/oversize/cancel, rotation, and
-system/light/dark theme changes. Confirm covers/grid navigation and no game/menu
-appearance change. Installation requires explicit approval. There is no push,
-release or migration beyond the already authorized stages.
+The earlier Blue Waves review located an ARMSX2 JPEG but did not establish its
+asset-specific provenance/license scope. That image is not copied or recreated.
+Existing license, provenance, audit and asset-review records are preserved.

@@ -52,3 +52,21 @@ The helper's NDK unwind archive and full toolchain notice are additionally pinne
 ## PSX2 identity update
 
 The public project name is PSX2 (formerly ARMSX2 Hybrid). The new application ID is `com.psx2.glitch`; internal Java/Kotlin/JNI namespaces remain unchanged. The ARMSX2 2.9.1 core retains its upstream name and credits. This documentation update does not refresh the partial source snapshot or make the complete APK buildable. The current README icon is a combined preview of the approved adaptive layers; older statements about the supplied PNG describe the historical snapshot.
+
+
+## Current private build 15284
+
+The app is named PSX2, package `com.psx2.glitch`, version `1.0.0-beta`/15284.
+It was installed separately on the owner's device using an update, preserving
+its signing certificate and app identity. The installation is not an APK release.
+
+Private host checks cover the new Classic Plasma tuning, Gallery image-selection
+policy, existing lifecycle gates and the earlier metadata/BIOS/controller/cover
+regressions. All11 native libraries and976 other packaged res/ entries match15283;
+cover/library layout and controller assets are unchanged. These private checks do
+not establish complete Android visual, picker, GPU or gameplay acceptance.
+
+This update publishes documentation and the approved adaptive README icon only.
+The public source snapshot, dependencies and build limitations above remain as
+recorded; it does not contain the newer Gallery implementation or full matching
+Corresponding Source for15284. Public APK downloads remain unavailable.

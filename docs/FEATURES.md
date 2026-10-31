@@ -10,6 +10,7 @@ Features below describe private-project implementations; “included” means so
 | Custom Button Skin System | SkinArchive/Policy/Store/Repository/Renderer/Ui and related helpers | Skin images, catalog ZIPs, legacy UI hooks/resources |
 | Automatic Cover Downloader | CoverManager and CoverPolicy | Legacy game-library hooks and fallback artwork |
 | 2D/3D Game Library | Cache/style selection and image binding logic | Full library screen, resources and game cover artwork |
+| Background Gallery / Classic Plasma | Documentation only; see BACKGROUND-GALLERY.md | The newer Gallery/dialog, plasma renderer, UI resources and picker implementation are not exported in this snapshot |
 | Remote Play | Hybrid UI/runtime source, pad ownership policy and verified ARMSX2 backend snapshots | Generator adaptations, native WebRTC, core binaries, legacy settings tabs and resources |
 | JNI/Native Core Integration | NativeApp contract and Bridge entry points | Core native implementation/binaries and legacy host |
 | Diagnostics | legacy_trace.cpp | Legacy library it instruments and native build setup |
@@ -29,4 +30,4 @@ The private app and GitHub icon use the supplied PNG. The exported source alone 
 
 The public project name is PSX2 (formerly ARMSX2 Hybrid). The new application ID is `com.psx2.glitch`; internal Java/Kotlin/JNI namespaces remain unchanged. The ARMSX2 2.9.1 core retains its upstream name and credits. This documentation update does not refresh the partial source snapshot or make the complete APK buildable. The current README icon is a combined preview of the approved adaptive layers; older statements about the supplied PNG describe the historical snapshot.
 
-The private 15280 candidate adds a library-only [Background Gallery](BACKGROUND-GALLERY.md), separate from the rebranding-only 15279 APK. Default follows app theme; Classic Blue is original; Custom Image uses bounded SAF preview with Cancel/Apply. Blue Waves is withheld pending artwork rights verification. These new Gallery implementation files are not added to this historical partial source snapshot.
+The current private build15284 provides a compact library-only [Background Gallery](BACKGROUND-GALLERY.md): Default follows the app theme, Classic Plasma uses original procedural shading, and Custom Image reuses a draft/saved choice across preset switches. Choose Image explicitly replaces an image and Apply persists the selection. Blue Waves artwork remains withheld. These newer Gallery implementation files are not added to the historical partial source snapshot.
